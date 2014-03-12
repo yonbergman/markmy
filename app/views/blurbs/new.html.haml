@@ -1,0 +1,12 @@
+#new-blurb
+  .row
+    .col-sm-12
+      %h1 Create New Blurb
+  .row
+    .col-sm-12
+      = form_for(@blurb) do |f|
+        -# = f.label :text
+        .form-group
+          = f.text_area :text, class: 'form-control', rows: 5, placeholder: 'Write what ever you want...'
+        .form-group
+          = f.submit class: 'btn btn-md btn-default pull-right'

@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: markmy
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: markmy_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: markmy
+  pool: 5

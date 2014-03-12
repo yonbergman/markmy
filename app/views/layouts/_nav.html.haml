@@ -1,0 +1,23 @@
+%nav.navbar.navbar-default{role: 'navigation'}
+  .container
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#navigation-actions", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: root_path}
+          %i.fa.fa-bookmark
+          = t('site.title')
+      #navigation-actions.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            = link_to new_blurb_path do
+              %i.fa.fa-plus
+              Create new blurb
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{href: "#"} Sign In
+          %li
+            %a{href: "#"} About

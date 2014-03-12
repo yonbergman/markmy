@@ -1,0 +1,12 @@
+.blurb
+  .bg
+    .img
+      = image_tag(@blurb.image)
+  .content
+    .text= @blurb.text
+    .time
+      %i.fa.fa-clock-o
+      = @blurb.time
+    .by
+      %i.fa.fa-user
+      Anonymous
