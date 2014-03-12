@@ -1,12 +1,34 @@
-.blurb
-  .bg
-    .img
-      = image_tag(@blurb.image)
-  .content
-    .text= @blurb.text
-    .time
-      %i.fa.fa-clock-o
-      = @blurb.time
-    .by
-      %i.fa.fa-user
-      Anonymous
+#blurb-page.row
+  .blurb
+    .bg
+      .img
+        = image_tag(@blurb.image)
+    .content
+      .text
+        %span= @blurb.text
+        .timeago= t('blurb.timeago', time: time_ago_in_words(@blurb.time))
+      .time
+        %i.fa.fa-clock-o
+        %span= @blurb.time
+      .by
+        %i.fa.fa-user
+        %span= t('blurb.who', user: @blurb.username)
+  .action-bar
+    %span
+      %strong Share:
+      %span &nbsp;
+    .btn.btn-sm.btn-default
+      %i.fa.fa-facebook
+      %span Share on Facebook
+    .btn.btn-sm.btn-default
+      %i.fa.fa-twitter
+      %span Share on Twitter
+    .copy-link
+      .input-group
+        %input.form-control{type: "text", value: blurb_url(@blurb)}
+        %span.input-group-btn
+          %button.btn.btn-default{type: "button"}
+            %i.fa.fa-link
+            %span Copy Link
+
+  .rundown

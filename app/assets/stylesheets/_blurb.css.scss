@@ -1,0 +1,142 @@
+#blurb-page{
+  margin-top: - $navbar-margin-bottom;
+}
+
+.blurb{
+  // z-index: 1;
+  // position: absolute;
+  // top: 50px;
+  // left: 0;
+  // width: 100%;
+
+  position: relative;
+  height: 240px;
+
+  @include xxs {
+    height: 260px;
+  }
+  @include xs {
+    height: 280px;
+  }
+  @include sm {
+    height: 320px;
+  }
+  @include md {
+    height: 360px;
+  }
+  @include lg {
+    height: 400px;
+  }
+
+  color: white;
+  @include text-shadow(0 2px 6px rgba(0,0,0,0.7));
+
+  .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .img{
+      position: relative;
+      height: 100%;
+      @extend .container;
+      background-color: black;
+      padding: 0;
+      overflow: hidden;
+      @include filter(
+        blur(0)
+      ); // WEBKIT ISSUE WITH OVERFLOW
+
+      img{
+        // content: '';
+        // @include background-image(image-url('bg1.jpg'));
+        // background-position: top center;
+        // background-size: 100%;
+        // background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        // height: 100%;
+        @include filter(
+          blur(2px)
+          brightness(1.3)
+          saturate(1.5)
+          grayscale(0.5)
+        );
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        background: black;
+        opacity: 0.4;
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+  }
+  .content{
+    position: relative;
+    text-align: center;
+    height: 100%;
+    @extend .container;
+    .text{
+      @include display-box;
+      @include box-orient(vertical);
+      @include box-align(center);
+      @include box-flex(1);
+      @include box-pack(center);
+      @include box-sizing(border-box);
+      @extend h1;
+      margin: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+    .time{
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 11px;
+    }
+    .timeago{
+      margin-top: 0.1em;
+      font-size: 0.4em;
+    }
+    .by{
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-size: 16px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 14px;
+
+      }
+    }
+  }
+
+
+}
+
+.action-bar{
+  height: $navbar-height;
+  background-color: $navbar-default-bg;
+  color: $navbar-default-color;
+  padding: 9px $navbar-padding-horizontal;
+  width: 100%;
+  border-top: 1px solid #AAA;
+  @include box-shadow(0 1px white inset);
+
+  .copy-link{
+    width: 320px;
+    // display: inline-block;
+    @include inline-block;
+    @extend .hidden-xs;
+  }
+}
+
+.runner{
+  // height: 50px;
+  background: white;
+}

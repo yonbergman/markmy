@@ -6,137 +6,37 @@ $brand-primary: $color;
 @import 'bootstrap';
 @import 'font-awesome';
 
+@import 'mixins';
+@import 'blurb';
+
 body{
   font-family: 'Ubuntu', sans-serif;
   background: $color;
+  padding-bottom: 70px;
+  position: relative;
 }
 
 .navbar-brand{
   font-size: 25px;
-}
-
-.navbar{
-  z-index: 10;
-}
-
-.navbar-brand{
-  i{
+  i.fa{
     color: $color;
   }
-
 }
 
-.blurb{
-  z-index: 1;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-
-  height: 240px;
-
-  @media (max-width: $screen-xs-min) {
-    height: 260px;
-  }
-
-  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-    height: 280px;
-  }
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    height: 320px;
-  }
-
-  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    height: 360px;
-  }
-
-
-  @media (min-width: $screen-lg-min) {
-    height: 400px;
-  }
-
-  color: white;
-  @include text-shadow(0 2px 6px rgba(0,0,0,0.7));
-
-  .bg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    .img{
-      position: relative;
-      height: 100%;
-      @extend .container;
-      background-color: black;
-      padding: 0;
-      overflow: hidden;
-      @include filter(
-        blur(0)
-      ); // WEBKIT ISSUE WITH OVERFLOW
-
-      img{
-        // content: '';
-        // @include background-image(image-url('bg1.jpg'));
-        // background-position: top center;
-        // background-size: 100%;
-        // background-repeat: no-repeat;
-        position: absolute;
-        width: 100%;
-        // height: 100%;
-        @include filter(
-          blur(2px)
-          brightness(1.3)
-          saturate(1.5)
-          grayscale(0.5)
-        );
-      }
-
-      &:after{
-        content: '';
-        position: absolute;
-        background: black;
-        opacity: 0.4;
-        width: 100%;
-        height: 100%;
-
-      }
-    }
-  }
-  .content{
-    position: relative;
-    text-align: center;
-    height: 100%;
-    @extend .container;
-    .text{
-      @extend h1;
-      margin: 0;
-      padding-top: 100px;
-      height: 100%;
-    }
-    .time, .by{
-      position: absolute;
-      bottom: 7px;
-    }
-    .time{
-      left: 10px;
-    }
-    .by{
-      right: 10px;
-    }
-  }
-
-
-
+.footer{
+  color: #eee;
+  a { color: #eef;}
+  margin: 40px;
 }
+
+
 #new-blurb{
   color: #EEE;
 }
+
 #home{
   .why{
-    color: #BBB;
+    color: #DDD;
   }
   .first-blurb{
     input[type='submit']{

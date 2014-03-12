@@ -28,6 +28,10 @@ class Blurb < ActiveRecord::Base
     IMAGES.sample
   end
 
+  def username
+    'Anonymous'
+  end
+
   private
 
   def set_default_values
