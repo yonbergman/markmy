@@ -18,7 +18,7 @@
 
             var settings = $.extend({
 
-                path: '/assets/ZeroClipboard.swf',
+                path: '/ZeroClipboard.swf',
                 copy: null,
                 beforeCopy: null,
                 afterCopy: null,
