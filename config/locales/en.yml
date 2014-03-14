@@ -1,7 +1,7 @@
 en:
   site:
     title: 'Mark.My'
-    description: 'A way to share timed blurbs of information'
+    description: 'Mark.My is the a new way to share timed blurbs of information with friends and enemies; The ultimate way to say I told you so for the 21st century.'
   blurb:
     who: '%{user} said:'
     timeago: '%{time} ago'
