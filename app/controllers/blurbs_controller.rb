@@ -10,11 +10,7 @@ class BlurbsController < ApplicationController
 
   def show
   end
-
-  def new
-    @blurb = Blurb.new
-  end
-
+  
   def create
     @blurb = create_blurb
 
