@@ -1,0 +1,15 @@
+nav.share {
+  @include inline-block;
+  div {float:left; overflow:hidden;}
+}
+.twitter-share-button, .twitter-count-horizontal {
+  max-width:80px;
+}
+.fb_iframe_widget {
+  // min-width: 80px;
+  vertical-align: top;
+  margin-right: 6px;
+}
+.fb_iframe_widget span { vertical-align: middle; }
+.fb_edge_widget_with_comment { vertical-align: middle;}
+.fb-like{ @include inline-block; }

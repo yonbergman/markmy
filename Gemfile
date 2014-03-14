@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'shareable'
 
 
 group :development, :test do
