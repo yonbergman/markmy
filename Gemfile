@@ -20,7 +20,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 
-
 group :development, :test do
   gem 'powder'
   gem 'debugger'

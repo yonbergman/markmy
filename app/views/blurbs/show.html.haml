@@ -14,8 +14,13 @@
       .input-group
         %input.form-control{type: "text", value: blurb_url(@blurb)}
         %span.input-group-btn
-          %button.btn.btn-default{type: "button"}
+          %button.btn.btn-default#copy-link{type: "button"}
             %i.fa.fa-link
             %span Copy Link
 
+
+
   .rundown
+
+:javascript
+  copyUrl('#copy-link', #{blurb_url(@blurb).to_json});
