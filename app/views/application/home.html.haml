@@ -5,12 +5,18 @@
       %br.visible-sm.visible-xs
       %i.fa.fa-bookmark
       Mark.My
-    %p A place to share timestamped blurbs of info
+    %p
+      Share
+      %em timed blurbs of information
+      with friends and enemies;
+      %br
+      The ultimate way to say
+      %strong I told you so
+      for the 21st century.
     .row
       = form_for @blurb, class: 'form-inline' do |f|
-        -# = f.label :text
         .form-group.col-md-9.col-sm-7
-          = f.text_area :text, class: 'form-control', rows: 3, placeholder: 'Write what ever you want...'
+          = f.text_area :text, class: 'form-control demo-text', rows: 3, placeholder: 'Write what ever you want...'
         .form-group.col-md-3.col-sm-5.text-right.first-blurb
           %p.timestamp
             %strong

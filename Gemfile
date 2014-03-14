@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'shareable'
 gem 'momentjs-rails'
-
+gem 'underscore-rails'
 
 
 group :development, :test do

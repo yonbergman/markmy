@@ -27,19 +27,14 @@ body{
 }
 
 .footer{
-  color: #eee;
-  a { color: #eef;}
+  color: $white-text;
+  a { color: $white-text-link;}
   margin: 40px;
-}
-
-
-#new-blurb{
-  color: #EEE;
 }
 
 #home{
   .why{
-    color: #DDD;
+    color: $white-text;
   }
   .first-blurb{
     p{

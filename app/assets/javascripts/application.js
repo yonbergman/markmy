@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require zclip
 //= require moment
+//= require underscore
 //= require_tree .
