@@ -70,6 +70,7 @@ GEM
     fssm (0.2.10)
     haml (4.0.5)
       tilt
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
     jquery-rails (3.1.0)
@@ -161,6 +162,7 @@ DEPENDENCIES
   enumify
   font-awesome-rails
   haml
+  hashie
   jquery-rails
   momentjs-rails
   pg

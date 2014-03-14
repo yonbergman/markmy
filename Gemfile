@@ -6,6 +6,7 @@ gem 'pg'
 
 gem 'enumify'
 gem 'devise'
+gem 'hashie'
 
 gem 'haml'
 gem 'sass', '3.2.13'
