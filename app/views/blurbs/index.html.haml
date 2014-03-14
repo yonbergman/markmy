@@ -1,0 +1,14 @@
+#my-blurbs-page
+  %h1
+    My Blurbs
+  - if current_user.guest_account?
+    %p
+      %i.fa.fa-warning-sign.fa-lg
+      %strong Note:
+      %span You are using a guest account
+      = link_to 'Create Account', edit_user_registration_path
+      %span to be able to comeback here later
+
+  .row
+    - @blurbs.each do |blurb|
+      = render 'blurbs/thumbnail', blurb: blurb

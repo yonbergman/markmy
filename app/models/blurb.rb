@@ -5,6 +5,8 @@ class Blurb < ActiveRecord::Base
   after_initialize :set_default_values
   validates_presence_of :token, :text
 
+  belongs_to :user
+
   IMAGES = [
     'https://farm6.staticflickr.com/5229/5614979258_f6b9a8b586_b.jpg',
     'https://farm4.staticflickr.com/3430/3263900493_3faeb0f582_b.jpg',
@@ -25,7 +27,7 @@ class Blurb < ActiveRecord::Base
   end
 
   def image
-    IMAGES.sample
+    IMAGES[id % IMAGES.length]
   end
 
   def username

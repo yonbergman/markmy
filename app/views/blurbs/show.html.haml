@@ -1,18 +1,5 @@
 #blurb-page.row
-  .blurb
-    .bg
-      .img
-        = image_tag(@blurb.image)
-    .content
-      .text
-        %span= @blurb.text
-        .timeago= t('blurb.timeago', time: time_ago_in_words(@blurb.time))
-      .time
-        %i.fa.fa-clock-o
-        %span= @blurb.time
-      .by
-        %i.fa.fa-user
-        %span= t('blurb.who', user: @blurb.username)
+  = render 'blurbs/image_with_text', blurb: @blurb
   .action-bar
     %span
       %strong Share:

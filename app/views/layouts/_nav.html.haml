@@ -16,8 +16,21 @@
             = link_to new_blurb_path do
               %i.fa.fa-plus
               Create new blurb
+          %li
+            = link_to my_blurbs_path do
+              %i.fa.fa-list-ul
+              My Blurbs
         %ul.nav.navbar-nav.navbar-right
-          %li
-            %a{href: "#"} Sign In
-          %li
-            %a{href: "#"} About
+          - if user_signed_in?
+            %li
+              .navbar-text
+                %span Signed in as
+                %strong= current_user.name
+            - if current_user.guest_account?
+              %li
+                = link_to 'Create Account', edit_user_registration_path
+            %li
+              = link_to 'Sign out', destroy_user_session_path, method: 'DELETE'
+          - else
+            %li
+              = link_to 'Sign in', new_user_session_path
