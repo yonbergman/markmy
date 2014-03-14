@@ -31,7 +31,7 @@ class Blurb < ActiveRecord::Base
   end
 
   def username
-    'Anonymous'
+    user.try(:name).presence || 'Anonymous'
   end
 
   private
