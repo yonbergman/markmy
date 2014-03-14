@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require zclip
+//= require moment
 //= require_tree .

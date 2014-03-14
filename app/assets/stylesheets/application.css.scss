@@ -42,8 +42,15 @@ body{
     color: #DDD;
   }
   .first-blurb{
-    input[type='submit']{
-      margin-top: 34px;
+    p{
+      margin-top: 16px;
+      margin-bottom: 4px;
+      font-size: 14px;
+      text-align: center;
+
+      @include md {
+        margin-top: 0;
+      }
     }
   }
 }

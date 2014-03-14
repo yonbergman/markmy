@@ -2,8 +2,6 @@
 * og image tag on facebook
 * Add Support fo email creation
 * better handling longer texts
-* Share on Facebook
-* Share on Twitter
 * better images
 * enable user to change images by "mood"
 * Add Support fo twitter creation

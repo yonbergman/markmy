@@ -19,6 +19,8 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'shareable'
+gem 'momentjs-rails'
+
 
 
 group :development, :test do

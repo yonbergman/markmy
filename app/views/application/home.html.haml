@@ -12,6 +12,12 @@
         .form-group.col-md-9.col-sm-7
           = f.text_area :text, class: 'form-control', rows: 3, placeholder: 'Write what ever you want...'
         .form-group.col-md-3.col-sm-5.text-right.first-blurb
+          %p.timestamp
+            %strong
+              %i.fa.fa-lock
+              Timestamp:
+            %br.visible-md
+            %span.value= Time.now
           = f.submit 'Create your first blurb', class: 'btn btn-md btn-primary btn-block'
   %br
   .row.why
@@ -32,3 +38,11 @@
           %h2 Share
           %hr
           %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.
+  :javascript
+    el = $('.timestamp .value')
+    run = function(){el.text(moment().format('YYYY-MM-DD HH:mm:ss'))}
+    run();
+    setInterval(
+      function() { run(); }
+      , 250
+      )
