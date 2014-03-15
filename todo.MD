@@ -1,12 +1,15 @@
+# First Version
+* enable user to change images by "mood"
+* Analytics
 * I18n all teh strings
-* og image tag on facebook
 * Add Support fo email creation
 * better handling longer texts
-* better images
-* enable user to change images by "mood"
+
+# Next Version
 * Add Support fo twitter creation
 * Add notification feature
 
+# Future
 * Content review
 * Add Comments?
 * search for image based on text?
