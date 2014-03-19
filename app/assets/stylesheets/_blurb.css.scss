@@ -32,6 +32,11 @@ $max-width: 720px;
     text-decoration: none;
   }
 
+  .avatar{
+    @include circle(20px);
+    border-width: 1px;
+  }
+
   .blurb{
     border: 2px solid #777;
     height: 240px;
@@ -135,15 +140,11 @@ $max-width: 720px;
     }
     .by{
       position: absolute;
-      top: 5px;
+      top: 7px;
       left: 10px;
       font-size: 16px;
       @media (max-width: $screen-xs-max) {
         font-size: 14px;
-      }
-      .avatar {
-        border-radius: 27px;
-        border: solid 2px white;
       }
     }
   }
@@ -178,4 +179,17 @@ $max-width: 720px;
   text-align: center;
   font-size: 12px;
   color: $white-text;
+}
+
+.avatar {
+  @include circle(36px);
+  border: solid 2px white;
+  @media (max-width: $screen-xs-max) {
+    @include circle(22px);
+    border-width: 1px;
+  }
+
+  @include box-shadow(1px 1px 0 1px rgba(0,0,0,0.2));
+  -webkit-backface-visibility: hidden;
+  margin-right: 3px;
 }

@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def avatar_url(user)
-    default_url = "#{root_url}images/guest.png"
+    default_url = image_url('icon120.png')
     if user.guest_account?
       default_url
     else

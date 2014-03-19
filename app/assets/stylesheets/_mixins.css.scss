@@ -26,3 +26,10 @@
     @content;
   }
 }
+
+
+@mixin circle($radius){
+  width: $radius;
+  height: $radius;
+  border-radius: $radius;
+}
