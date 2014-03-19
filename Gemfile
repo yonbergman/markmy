@@ -23,7 +23,6 @@ gem 'shareable'
 gem 'momentjs-rails'
 gem 'underscore-rails'
 
-
 group :development, :test do
   gem 'powder'
   gem 'debugger'
