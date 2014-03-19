@@ -1,42 +1,49 @@
-#home
-  .jumbotron
-    %h1
-      = t('home.welcome')
-      %br.visible-sm.visible-xs
-      %i.fa.fa-bookmark
-      = t('site.title')
-    %p!= t('home.header')
-    .row
-      = form_for @blurb, class: 'form-inline' do |f|
-        .form-group.col-md-9.col-sm-7
-          = f.text_area :text, class: 'form-control demo-text', rows: 3, placeholder: 'Write what ever you want...'
-        .form-group.col-md-3.col-sm-5.text-right.first-blurb
-          %p.timestamp
-            %strong
-              %i.fa.fa-lock
-              %span.caplitalize #{t('timestamp').capitalize}:
-            %br.visible-md
-            %span.value= Time.now
-          = f.submit t('home.action'), class: 'btn btn-md btn-primary btn-block'
-    .row
-      .col-xs-12
-        %span Predictions created can not be modified in any way, they are timed and locked forever.
-  %br
-  .row.why
-    .col-xs-10.col-xs-offset-1
-      .row
-        - %w(why.timestamped why.secure why.share).each do |scope|
-          .col-sm-4
-            %i.fa.fa-5x{class: t('icon', scope: scope)}
-            %h2= t('title', scope: scope)
-            %hr
-            %p= t('content', scope: scope)
+- @noheight = true
+- content_for :on_body do
+  .bg-img
+    .bgg{:style => "background-image: url('https://farm1.staticflickr.com/45/149754989_e7f517336c_b.jpg')"}
 
-  :javascript
-    el = $('.timestamp .value')
-    run = function(){el.text(moment().format('YYYY-MM-DD HH:mm:ss'))}
-    run();
-    setInterval(
-      function() { run(); }
-      , 250
-      )
+  #home
+    .jumbotron
+      .container
+        %h1
+          = t('home.welcome')
+          %br.visible-sm.visible-xs
+          %i.fa.fa-bookmark
+          = t('site.title')
+        %p!= t('home.header')
+        .row
+          = form_for @blurb, class: 'form-inline' do |f|
+            .form-group.col-md-9.col-sm-7
+              = f.text_area :text, class: 'form-control demo-text', rows: 3, placeholder: 'Write what ever you want...'
+            .form-group.col-md-3.col-sm-5.text-right.first-blurb
+              %p.timestamp
+                %strong
+                  %i.fa.fa-lock
+                  %span.caplitalize #{t('timestamp').capitalize}:
+                %br.visible-md
+                %span.value= Time.now
+              = f.submit t('home.action'), class: 'btn btn-md btn-primary btn-block'
+        .row
+          .col-xs-12
+            %span Predictions created can not be modified in any way, they are timed and locked forever.
+    .container
+      %br
+      .row.why
+        .col-xs-10.col-xs-offset-1
+          .row
+            - %w(why.timestamped why.secure why.share).each do |scope|
+              .col-sm-4
+                %i.fa.fa-5x{class: t('icon', scope: scope)}
+                %h2= t('title', scope: scope)
+                %hr
+                %p= t('content', scope: scope)
+
+      :javascript
+        el = $('.timestamp .value')
+        run = function(){el.text(moment().format('YYYY-MM-DD HH:mm:ss'))}
+        run();
+        setInterval(
+          function() { run(); }
+          , 250
+          )

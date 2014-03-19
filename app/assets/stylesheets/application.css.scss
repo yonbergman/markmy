@@ -34,11 +34,14 @@ body{
   }
 }
 
-body > .container{
+body > .main-container{
   @include min-height(100%);
   position: relative;
   margin-top: -2px; //weird scrollbar thingie
   padding-bottom: 70px;
+  &.no-height{
+    @include min-height(0);
+  }
 }
 
 .footer{
@@ -69,4 +72,8 @@ body > .container{
       }
     }
   }
+}
+
+.jumbotron{
+  background: rgba(white, 0.6);
 }

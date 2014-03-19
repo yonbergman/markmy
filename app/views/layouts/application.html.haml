@@ -17,6 +17,6 @@
     = render 'layouts/ga'
     = render 'layouts/nav'
     = yield :on_body
-    .container
+    .container.main-container{class: @noheight && 'no-height'}
       = yield
       = render 'layouts/footer'
