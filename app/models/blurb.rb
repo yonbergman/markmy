@@ -1,6 +1,7 @@
 class Blurb < ActiveRecord::Base
 
   TOKEN_LENGTH = 10
+  COLORS = %w(#173D5F #1F3D0E #470909 #376672 #340E49 #828627 #68213B #313C35)
 
   after_initialize :set_default_values
   validates_presence_of :token, :text
@@ -24,7 +25,7 @@ class Blurb < ActiveRecord::Base
   end
 
   def color
-    '#2666A0'
+    COLORS[id % COLORS.length]
   end
 
   private

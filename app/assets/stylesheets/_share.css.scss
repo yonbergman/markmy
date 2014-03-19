@@ -1,15 +1,12 @@
-nav.share {
-  @include inline-block;
-  div {float:left; overflow:hidden;}
-}
-.twitter-share-button, .twitter-count-horizontal {
-  max-width:80px;
-}
-.fb_iframe_widget {
-  // min-width: 80px;
+nav.share {display:inline-block;} /* shareable's nav tag */
+nav.share div {float:left; overflow:hidden;}
+nav.share iframe {max-height:20px; border:0; margin-top:0; padding-top:0;} /* if using medium sized buttons */
+#___plusone_0 {max-width:70px; font-size: default !important; }
+.twitter-share-button, .twitter-count-horizontal {max-width:80px;}
+.fb_iframe_widget span { vertical-align: top; }
+.fb_edge_widget_with_comment { vertical-align: top;}
+.fb-like{display:inline-block}
+.fb_iframe_widget{
   vertical-align: top;
-  margin-right: 6px;
+  margin-right: 5px;
 }
-.fb_iframe_widget span { vertical-align: middle; }
-.fb_edge_widget_with_comment { vertical-align: middle;}
-.fb-like{ @include inline-block; }

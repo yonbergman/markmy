@@ -5,13 +5,13 @@ Shareable.configure do |config|
   #facebook
   ##############
   #config.app_id=''
-  #config.send= 'false'
-  #config.layout=''
+  # config.send= 'true'
+  # config.layout='button-count'
   #config.show_faces=''
-  #config.width='80'
-  #config.action=''
+  # config.width='80'
+  # config.action='button-count'
   #config.font=''
-  #config.colorscheme=''
+  config.colorscheme='dark'
   #config.ref=''
 
   ##############

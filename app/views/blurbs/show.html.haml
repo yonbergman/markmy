@@ -3,7 +3,7 @@
     .bgg{:style => "background-image: url('#{@blurb.image_url}')"}
 
 #prediction-page
-  .prediction-poster
+  .prediction-poster{:style => "background-color: #{@blurb.color}"}
     .content
       .text= @blurb.text
       .attribution
