@@ -1,13 +1,12 @@
 #my-blurbs-page
-  %h1
-    My Blurbs
+  %h1= t('my_predictions')
   - if current_user.guest_account?
     %p
       %i.fa.fa-warning-sign.fa-lg
-      %strong Note:
-      %span You are using a guest account
+      %strong #{t('note')}:
+      %span= t('my_predictions_page.note.a')
       = link_to 'Create Account', edit_user_registration_path
-      %span to be able to comeback here later
+      %span= t('my_predictions_page.note.b')
 
   .row
     - @blurbs.each do |blurb|

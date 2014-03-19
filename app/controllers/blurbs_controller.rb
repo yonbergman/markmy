@@ -4,13 +4,13 @@ class BlurbsController < ApplicationController
   before_filter :authenticate_user!, only: [:index]
 
   def index
-    @title = 'My Blurbs'
+    @title = I18n.translate('my_predictions')
     @blurbs = current_user.blurbs
   end
 
   def show
   end
-  
+
   def create
     @blurb = create_blurb
 

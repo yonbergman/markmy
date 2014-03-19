@@ -1,8 +1,6 @@
 # First Version
-* rename blurb to 'prediction'
 * enable user to change images by "mood"
 * Analytics
-* I18n all teh strings
 * Livestamp in prediction page
 * Add gravatar support
 * Add name field to user

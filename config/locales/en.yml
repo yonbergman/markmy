@@ -1,8 +1,52 @@
 en:
+  timestamp: 'timestamp'
+  prediction: 'prediction'
+  predictions: 'predictions'
+  my_predictions: 'My Predictions'
+  note: 'Note'
+
   site:
     title: 'Mark.My'
     description: 'Mark.My is the a new way to share timed blurbs of information with friends and enemies; The ultimate way to say I told you so for the 21st century.'
+    footer:
+      copyright: '© 2014'
+
   blurb:
     who: '%{user} said:'
     timeago: '%{time} ago'
     share: 'Share'
+    share_description: 'Mark my words:'
+    copy_link: 'Copy Link'
+
+  home:
+    welcome: 'Welcome to'
+    header: 'Share <em>timed predictions</em> with friends and enemies;<br/>The ultimate way to say <strong>I told you so</strong> for the 21st century.'
+    placholder:
+    action: 'Create your first prediction'
+
+  why:
+    timestamped:
+      title: 'Time Stamped'
+      icon: 'fa-clock-o'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.'
+    secure:
+      title: 'Secure'
+      icon: 'fa-lock'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.'
+    share:
+      title: 'Share'
+      icon: 'fa-share'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.'
+
+  nav:
+    create_prediction: 'Create Prediction'
+    user:
+      signed_in_as: 'Signed in as'
+      create_account: 'Create Account'
+      sign_in: 'Sign in'
+      sign_out: 'Sign Out'
+
+  my_predictions_page:
+    note:
+      a: 'You are using a guest account'
+      b: 'to be able to comeback here later'

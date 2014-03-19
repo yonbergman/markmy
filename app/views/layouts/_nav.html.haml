@@ -15,22 +15,22 @@
           %li
             = link_to new_blurb_path do
               %i.fa.fa-plus
-              Create new blurb
+              = t('nav.create_prediction')
           %li
             = link_to my_blurbs_path do
               %i.fa.fa-list-ul
-              My Blurbs
+              = t('my_predictions')
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
             %li
               .navbar-text
-                %span Signed in as
+                %span= t('nav.user.signed_in_as')
                 %strong= current_user.name
             - if current_user.guest_account?
               %li
-                = link_to 'Create Account', edit_user_registration_path
+                = link_to t('nav.user.create_account'), edit_user_registration_path
             %li
-              = link_to 'Sign out', destroy_user_session_path, method: 'DELETE'
+              = link_to t('nav.user.sign_out'), destroy_user_session_path, method: 'DELETE'
           - else
             %li
-              = link_to 'Sign in', new_user_session_path
+              = link_to t('nav.user.sign_in'), new_user_session_path
