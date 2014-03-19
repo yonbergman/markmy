@@ -96,7 +96,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     @include filter(
       blur(2px)
       brightness(1.3)
