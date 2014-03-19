@@ -54,6 +54,9 @@
   @include xxs {
     font-size: 9px;
   }
+  @media (max-width: 320px) {
+    font-size: 7px;
+  }
   @include xs {
     font-size: 11px;
   }

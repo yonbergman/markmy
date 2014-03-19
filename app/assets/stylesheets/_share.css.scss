@@ -9,4 +9,6 @@ nav.share iframe {max-height:20px; border:0; margin-top:0; padding-top:0;} /* if
 .fb_iframe_widget{
   vertical-align: top;
   margin-right: 5px;
+  display: inline-block !important;
+  width: auto !important;
 }
