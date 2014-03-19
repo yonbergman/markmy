@@ -1,9 +1,8 @@
 # First Version
-* Add name field to user
-* Author tools (image...)
 * flash message "You are now using a temporary guest account, to be able to return to this prediction create an account"
 * Add Support fo email creation
 * better handling longer texts
+
 
 # Next Version
 * Create prediction in popup
@@ -15,6 +14,6 @@
 * Add Comments?
 * search for image based on text?
 * Feed
-p* Heart/like
+* Heart/like
 * Public/Unlisted
 * Upload an image
