@@ -2,7 +2,7 @@
 * flash message "You are now using a temporary guest account, to be able to return to this prediction create an account"
 * Add Support fo email creation
 * better handling longer texts
-
+* image attribution
 
 # Next Version
 * Create prediction in popup
