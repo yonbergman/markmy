@@ -42,8 +42,11 @@
     position: absolute;
     text-transform: uppercase;
     bottom: 13px;
-    right: 15px;
+    right: 0;
     font-size: 16px;
+    width: 100%;
+    text-align: right;
+    padding: 0 15px;
   }
 }
 
@@ -55,7 +58,8 @@
     font-size: 11px;
   }
   width: 38em;
-  margin: 0 auto;
+  margin: - $navbar-margin-bottom auto 0 auto;
+  padding-top: $navbar-margin-bottom;
 }
 
 .prediction-poster{

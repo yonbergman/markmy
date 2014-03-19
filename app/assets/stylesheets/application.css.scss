@@ -2,6 +2,8 @@ $color: #25253D;
 $white-text: #eee;
 $white-text-link: #eef;
 $brand-primary: $color;
+$tooltip-color: rgba(0,0,0,0.9);
+$tooltip-bg: white;
 
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
 @import 'compass';
@@ -35,7 +37,6 @@ body{
 body > .container{
   @include min-height(100%);
   position: relative;
-  margin-top: -10px;
 }
 
 .footer{
