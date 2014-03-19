@@ -1,4 +1,4 @@
-$max-width: 568px;
+$max-width: 720px;
 
 #blurb-page{
   margin-top: - $navbar-margin-bottom;
@@ -58,10 +58,10 @@ $max-width: 568px;
   position: relative;
   height: 260px;
   @media (min-width: $screen-xs-min) and (max-width: $max-width) {
-    height: 300px;
+    height: 320px;
   }
   @media (min-width: $max-width){
-    height: 360px;
+    height: 400px;
   }
   color: white;
   @include text-shadow(0 2px 6px rgba(0,0,0,0.7));
