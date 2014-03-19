@@ -1,6 +1,10 @@
 class Images
   attr_reader :data
 
+  def self.moods
+    self.new.moods
+  end
+
   def initialize
     @data = Hashie::Mash.new(YAML.load_file('config/images.yml')).images
   end
@@ -16,6 +20,11 @@ class Images
   def random_image(mood = nil)
     arr = data[mood].presence || all_images
     arr.sample
+  end
+
+  def mood_for_url(image_url)
+    found = data.find {|mood, images| images.include? image_url}
+    found and found.first
   end
 
   def inspect

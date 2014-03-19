@@ -11,6 +11,12 @@ $brand-primary: $color;
 @import 'mixins';
 @import 'blurb';
 @import 'share';
+@import 'prediction';
+
+
+html, body{
+  height: 100%;
+}
 
 body{
   font-family: 'Ubuntu', sans-serif;
@@ -26,11 +32,23 @@ body{
   }
 }
 
+body > .container{
+  @include min-height(100%);
+  position: relative;
+  margin-top: -10px;
+}
+
 .footer{
+  position: absolute;
+  left:0;
+  bottom: 0;
   color: $white-text;
   a { color: $white-text-link;}
-  margin: 40px;
+  padding: 20px 0px;
+  text-align: center;
+  width: 100%;
 }
+
 
 #home{
   .why{

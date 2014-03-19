@@ -15,6 +15,18 @@ class Blurb < ActiveRecord::Base
     user.try(:name).presence || 'Anonymous'
   end
 
+  def mood
+    @_mood ||= image_list.mood_for_url(image_url)
+  end
+
+  def mood=(mood)
+    self.image_url = image_list.random_image(mood)
+  end
+
+  def color
+    '#2666A0'
+  end
+
   private
 
   def set_default_values

@@ -4,7 +4,10 @@
       = image_tag(blurb.image_url)
   .content
     .text
-      %span= blurb.text
+      %span
+        %em “
+        = blurb.text
+        %em ”
       .timeago{'data-livestamp' => blurb.time.to_i}
     .by
       = image_tag(avatar_url(blurb.user), class: 'avatar')

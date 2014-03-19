@@ -16,6 +16,7 @@
   %body
     = render 'layouts/ga'
     = render 'layouts/nav'
+    = yield :on_body
     .container
       = yield
-    = render 'layouts/footer'
+      = render 'layouts/footer'

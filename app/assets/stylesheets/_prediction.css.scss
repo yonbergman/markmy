@@ -1,0 +1,132 @@
+#prediction-page{
+  .prediction-poster{
+    margin:30px auto 10px auto;
+  }
+}
+
+.prediction-poster{
+  position: relative;
+  border: 30px solid white;
+  height: 600px;
+  width: 500px;
+  @include box-sizing(border-box);
+  @include box-shadow(0 0 30px 2px rgba(0, 0, 0, 0.6));
+
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  background: #173D5F;
+  .content{
+    position: relative;
+    height: 100%;
+    @include display-box;
+    @include box-orient(vertical);
+    @include box-align(center);
+    @include box-flex(1);
+    @include box-pack(center);
+    @include box-sizing(border-box);
+  }
+
+  .text{
+    @extend h1;
+    font-size: 3.5em;
+    margin: 0 5px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    line-height: 1.2em;
+  }
+  .attribution{
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 13px;
+    right: 15px;
+    font-size: 16px;
+  }
+}
+
+#prediction-page{
+  @include xxs {
+    font-size: 9px;
+  }
+  @include xs {
+    font-size: 11px;
+  }
+  width: 38em;
+  margin: 0 auto;
+}
+
+.prediction-poster{
+  width: 38em;
+  height: 44em;
+  border-width: 2em;
+  .text{
+    width: 6.5em;
+  }
+  .attribution{
+    font-size: 1em;
+  }
+}
+
+
+.bg-img{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  @include filter(
+    blur(0)
+  ); // WEBKIT ISSUE WITH OVERFLOW
+
+  .bgg,img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include filter(
+      blur(2px)
+      brightness(1.3)
+      saturate(1.5)
+      grayscale(0.5)
+    );
+
+  }
+
+  &:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+
+    background: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+
+  }
+}
+
+.share-row{
+  text-align: center;
+  padding: 5px 0;
+  .copy-link{
+    .form-control{
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    #copy-link{
+      opacity: 0.6;
+    }
+  }
+  .share{
+    padding: 10px;
+  }
+}

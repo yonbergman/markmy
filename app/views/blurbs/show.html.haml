@@ -1,24 +1,47 @@
-.row
-  #blurb-page
-    .the-blurb
-      = render 'blurbs/image_with_text', blurb: @blurb
-      .action-bar
-        %span
-          %strong #{t('blurb.share')}:
-          %span &nbsp;
-        = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
-        .copy-link.hidden-xs
-          .input-group
-            %input.form-control{type: "text", value: blurb_url(@blurb)}
-            %span.input-group-btn
-              %button.btn.btn-default#copy-link{type: "button"}
-                %i.fa.fa-link
-                %span= t('blurb.copy_link')
-      .rundown
-    .notice
-      This prediction was created on
-      %em= @blurb.time
-      and was locked for changes since
+- content_for :on_body do
+  .bg-img
+    .bgg{:style => "background-image: url('#{@blurb.image_url}')"}
+
+#prediction-page
+  .prediction-poster
+    .content
+      .text= @blurb.text
+      .attribution
+        %span #{@blurb.username},
+        %span.timeago{'data-livestamp' => @blurb.time.to_i}
+  .notice
+    This prediction was created on
+    %em= @blurb.time
+    %br
+    and was locked for changes since
+
+
+  .share-row
+    .copy-link.hidden-xs
+      .input-group
+        %input.form-control{type: "text", value: blurb_url(@blurb)}
+        %span.input-group-btn
+          %button.btn.btn-default#copy-link{type: "button"}
+            %i.fa.fa-link
+            %span= t('blurb.copy_link')
+    = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
+
+
+- if @blurb.user == current_user
+  .change-image
+    %button.btn.btn-sm.change-image-button{data: {container: 'body', toggle: 'popover', placement: 'bottom'}}
+      %i.fa.fa-picture-o
+    .moods.hidden
+      = form_for(@blurb) do |f|
+        .btn-group
+          %p Change background:
+          - Images.moods.each do |mood|
+            %button.btn.btn-block.btn-default{type: 'submit', name: 'blurb[mood]', value: mood, class: @blurb.mood==mood && 'btn-primary'}= mood.capitalize
 
 :javascript
   copyUrl('#copy-link', #{blurb_url(@blurb).to_json});
+  // $(".btn[data-toggle='popover']").popover()
+  $('.change-image-button').popover({
+    html: true,
+    content: $('.moods').html()
+  })
