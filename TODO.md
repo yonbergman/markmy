@@ -1,8 +1,4 @@
 # First Version
-* enable user to change images by "mood"
-* Livestamp in prediction page
-* Add gravatar support
-* Add name field to user
 * Author tools (image...)
 * flash message "You are now using a temporary guest account, to be able to return to this prediction create an account"
 * Add Support fo email creation
