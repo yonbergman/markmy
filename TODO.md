@@ -1,6 +1,5 @@
 # First Version
 * enable user to change images by "mood"
-* Analytics
 * Livestamp in prediction page
 * Add gravatar support
 * Add name field to user

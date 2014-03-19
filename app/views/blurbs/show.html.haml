@@ -1,19 +1,24 @@
 .row
   #blurb-page
-    = render 'blurbs/image_with_text', blurb: @blurb
-    .action-bar
-      %span
-        %strong #{t('blurb.show')}:
-        %span &nbsp;
-      = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
-      .copy-link.hidden-xs
-        .input-group
-          %input.form-control{type: "text", value: blurb_url(@blurb)}
-          %span.input-group-btn
-            %button.btn.btn-default#copy-link{type: "button"}
-              %i.fa.fa-link
-              %span= t('blurb.copy_link')
-    .rundown
+    .the-blurb
+      = render 'blurbs/image_with_text', blurb: @blurb
+      .action-bar
+        %span
+          %strong #{t('blurb.show')}:
+          %span &nbsp;
+        = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
+        .copy-link.hidden-xs
+          .input-group
+            %input.form-control{type: "text", value: blurb_url(@blurb)}
+            %span.input-group-btn
+              %button.btn.btn-default#copy-link{type: "button"}
+                %i.fa.fa-link
+                %span= t('blurb.copy_link')
+      .rundown
+    .notice
+      This prediction was created on
+      %em= @blurb.time
+      and was locked for changes since
 
 :javascript
   copyUrl('#copy-link', #{blurb_url(@blurb).to_json});
