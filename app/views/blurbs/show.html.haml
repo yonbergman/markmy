@@ -4,7 +4,7 @@
       = render 'blurbs/image_with_text', blurb: @blurb
       .action-bar
         %span
-          %strong #{t('blurb.show')}:
+          %strong #{t('blurb.share')}:
           %span &nbsp;
         = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
         .copy-link.hidden-xs
