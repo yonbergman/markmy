@@ -7,5 +7,5 @@
       %span= blurb.text
       .timeago{'data-livestamp' => blurb.time.to_i}
     .by
-      %i.fa.fa-user
+      = image_tag(avatar_url(blurb.user), class: 'avatar')
       %span= t('blurb.who', user: blurb.username)
