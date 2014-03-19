@@ -1,14 +1,14 @@
 - content_for :on_body do
   .bg-img
     .bgg{:style => "background-image: url('#{@blurb.image_url}')"}
-      
+
 #prediction-page
   .prediction-poster
     .content
       .text= @blurb.text
       .attribution
         %span #{@blurb.username},
-        %span.timeago{'data-livestamp' => @blurb.time.to_i}
+        %span.timeago{'data-livestamp' => @blurb.time.to_i} #{time_ago_in_words(@blurb.time)} ago
   .notice
     This prediction was created on
     %em= @blurb.time

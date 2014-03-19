@@ -6,7 +6,7 @@
     .text
       %span
         = blurb.text
-      .timeago{'data-livestamp' => blurb.time.to_i}
+      .timeago{'data-livestamp' => blurb.time.to_i} #{time_ago_in_words(blurb.time)} ago
     .by
       = image_tag(avatar_url(blurb.user), class: 'avatar')
       %span= t('blurb.who', user: blurb.username)

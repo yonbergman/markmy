@@ -37,6 +37,7 @@ body{
 body > .container{
   @include min-height(100%);
   position: relative;
+  padding-bottom: 60px;
 }
 
 .footer{
