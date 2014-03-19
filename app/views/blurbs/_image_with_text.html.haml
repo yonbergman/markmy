@@ -5,7 +5,7 @@
   .content
     .text
       %span= blurb.text
-      .timeago= t('blurb.timeago', time: time_ago_in_words(blurb.time))
+      .timeago{'data-livestamp' => blurb.time.to_i}
     .time
       %i.fa.fa-clock-o
       %span= blurb.time

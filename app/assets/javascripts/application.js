@@ -16,5 +16,6 @@
 //= require bootstrap
 //= require zclip
 //= require moment
+//= require livestamp.min
 //= require underscore
 //= require_tree .
