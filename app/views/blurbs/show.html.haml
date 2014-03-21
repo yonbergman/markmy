@@ -8,7 +8,7 @@
       .text
         = @blurb.text
         .attribution
-          %span #{@blurb.username},
+          %span{ blurb_user_attributes } #{@blurb.username},
           %span.timeago{'data-livestamp' => @blurb.time.to_i} #{time_ago_in_words(@blurb.time)} ago
   .notice
     This prediction was created on
@@ -28,7 +28,7 @@
     = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
 
 
-- if @blurb.user == current_user
+- if author?
   .change-image
     %button.btn.btn-sm.change-image-button{data: {container: 'body', toggle: 'popover', placement: 'bottom'}}
       %i.fa.fa-picture-o
