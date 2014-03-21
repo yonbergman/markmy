@@ -2,6 +2,12 @@ class RegistrationsController < Devise::RegistrationsController
 
   before_filter :hide_guest_password, :only => [:edit]
 
+  def new
+    build_resource({})
+    @user.name = nil
+    respond_with self.resource
+  end
+
   def update
     account_update_params = devise_parameter_sanitizer.sanitize(:account_update)
 
@@ -29,4 +35,5 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.email = nil
     end
   end
+
 end
