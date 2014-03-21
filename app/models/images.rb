@@ -12,7 +12,7 @@ class Images
   end
 
   def moods
-    data.keys
+    data.keys.sort
   end
 
   def all_images

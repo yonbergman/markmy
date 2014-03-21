@@ -12,11 +12,12 @@ class DemoText
     @originalPlaceholder = @$el.attr('placeholder')
     setTimeout(
       ( => @run(); setInterval(@run, 2400) )
-    , 1200)
+    , 1800)
 
 
   run: ->
-    @$el.attr('placeholder', @originalPlaceholder + '        ... ' + _.sample(@texts))
+    # @$el.attr('placeholder', @originalPlaceholder + '        ... ' + _.sample(@texts))
+    @$el.attr('placeholder', _.sample(@texts))
 
 $(document).on 'ready page:load', ->
   el = $('.demo-text')
