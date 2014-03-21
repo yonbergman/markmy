@@ -5,10 +5,11 @@
 #prediction-page
   .prediction-poster{:style => "background-color: #{@blurb.color}"}
     .content
-      .text= @blurb.text
-      .attribution
-        %span #{@blurb.username},
-        %span.timeago{'data-livestamp' => @blurb.time.to_i} #{time_ago_in_words(@blurb.time)} ago
+      .text
+        = @blurb.text
+        .attribution
+          %span #{@blurb.username},
+          %span.timeago{'data-livestamp' => @blurb.time.to_i} #{time_ago_in_words(@blurb.time)} ago
   .notice
     This prediction was created on
     %em= @blurb.time

@@ -1,4 +1,6 @@
 class Images
+  COLORS = %w(#173D5F #1F3D0E #470909 #376672 #340E49 #828627 #68213B #313C35)
+
   attr_reader :data
 
   def self.moods
@@ -25,6 +27,10 @@ class Images
   def mood_for_url(image_url)
     found = data.find {|mood, images| images.include? image_url}
     found and found.first
+  end
+
+  def color_for_url(image_url)
+    COLORS[image_url.hash % COLORS.length]
   end
 
   def inspect
