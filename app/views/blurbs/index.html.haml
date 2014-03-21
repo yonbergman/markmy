@@ -1,13 +1,24 @@
 #my-blurbs-page
-  %h1= t('my_predictions')
-  - if current_user.guest_account?
-    %p
-      %i.fa.fa-warning-sign.fa-lg
-      %strong #{t('note')}:
-      %span= t('my_predictions_page.note.a')
-      = link_to 'Create Account', edit_user_registration_path
-      %span= t('my_predictions_page.note.b')
+  - if @blurbs.empty?
+    .text-center
+      %h1
+        %i.fa.fa-frown-o
+        No Predictions
+      %p
+        You don't have any predictions yet,
+        create your first prediction today!.
+      = link_to "Create my first prediction", new_blurb_path, class: 'btn btn-default btn-md'
 
-  .row
-    - @blurbs.each do |blurb|
-      = render 'blurbs/thumbnail', blurb: blurb
+  - else
+    %h1= t('my_predictions')
+    - if current_user.guest_account?
+      %p
+        %i.fa.fa-warning-sign.fa-lg
+        %strong #{t('note')}:
+        %span= t('my_predictions_page.note.a')
+        = link_to 'Create Account', edit_user_registration_path
+        %span= t('my_predictions_page.note.b')
+
+    .row
+      - @blurbs.each do |blurb|
+        = render 'blurbs/thumbnail', blurb: blurb

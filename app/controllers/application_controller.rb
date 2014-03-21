@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def home
     @blurb = Blurb.new
-    
+
   end
 
   def create_and_sign_in_guest_account
@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.for(:account_update) << :name
   end
 
 end

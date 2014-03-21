@@ -17,7 +17,10 @@ module BlurbsHelper
         trigger: 'hover',
         title: '<i class="fa fa-user"></i> Why am I Anonymous?',
         html: 'true',
-        content: 'You are using a temporary guest account, to <strong>Create Account</strong> and set your name click here.'}}
+        content: 'You are using a temporary guest account, to <strong>Create Account</strong> and set your name click here.'}
+      }
+    else
+      {}
     end
   end
 end
