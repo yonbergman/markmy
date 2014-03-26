@@ -9,7 +9,7 @@ class BlurbsController < ApplicationController
   end
 
   def show
-    @uploader = @blurb.image_url
+    @uploader = @blurb.custom_background
     @uploader.success_action_redirect = blurb_update_background_url(@blurb)
   end
 
@@ -29,7 +29,7 @@ class BlurbsController < ApplicationController
   end
 
   def update_background
-    @blurb.update(image_url: params.require(:key))
+    @blurb.update(key: params.require(:key))
     redirect_to @blurb
   end
 
@@ -40,7 +40,7 @@ class BlurbsController < ApplicationController
 
   private
   def current_blurb
-    @blurb ||= Blurb.find_by(token: params[:blurb_id] || params[:id])
+    @blurb ||= Blurb.find_by(token: params[:blurb_id].presence || params[:id])
     @title = @blurb.text
   end
 
@@ -57,7 +57,4 @@ class BlurbsController < ApplicationController
     current_user.blurbs.build(blurb_params)
   end
 
-  def blurb_author?
-
-  end
 end

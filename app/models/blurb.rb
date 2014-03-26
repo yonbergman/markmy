@@ -7,7 +7,7 @@ class Blurb < ActiveRecord::Base
 
   belongs_to :user
 
-  mount_uploader :image_url, BackgroundUploader
+  mount_uploader :custom_background, BackgroundUploader
 
   def to_param
     self.token
@@ -19,26 +19,27 @@ class Blurb < ActiveRecord::Base
 
   def background
     if custom_background?
-      image_url.url
+      custom_background_url
     else
-      self[:image_url]
+      image_url
     end
   end
 
   def custom_background?
-    image_url.path.present? and !image_url.path.include? 'http'
+    custom_background.present?
   end
 
-
   def image_attribution
-    @_image_info ||= custom_background? ? nil : image_list.info_for_url(background)
+    @_image_info ||= image_list.info_for_url(image_url)
   end
 
   def mood
-    @_mood ||= image_attribution and image_attribution.mood
+    return nil if custom_background?
+    @_mood ||= image_attribution.mood
   end
 
   def mood=(mood)
+    self.remove_custom_background!
     self.image_url = image_list.random_image(mood)
   end
 
@@ -49,7 +50,7 @@ class Blurb < ActiveRecord::Base
   private
 
   def set_default_values
-    self[:image_url] ||= image_list.random_image
+    self.image_url ||= image_list.random_image
     self.token  ||= SecureRandom.urlsafe_base64(TOKEN_LENGTH)
     self.time   ||= DateTime.now
   end
