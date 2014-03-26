@@ -103,6 +103,7 @@
       saturate(1.5)
       grayscale(0.5)
     );
+    @include translateZ(0);
 
   }
 
