@@ -138,3 +138,9 @@
     padding: 10px;
   }
 }
+
+.btn-upload-file{
+  > * {
+    pointer-events: none;
+  }
+}

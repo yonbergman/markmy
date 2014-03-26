@@ -3,7 +3,6 @@ class App.InputPresentValidator
     _.bindAll(@, 'testInput')
     @$el.on('keyup change', @testInput)
     @testInput()
-    # @$buttonEl.addClass('disabled')
 
   testInput: ->
     @$buttonEl.toggleClass('disabled', _.isBlank(@$el.val()))
