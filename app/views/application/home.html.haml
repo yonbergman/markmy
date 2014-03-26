@@ -6,27 +6,27 @@
   #home
     .jumbotron
       .container
-        %h1
-          = t('home.welcome')
-          %br.visible-sm.visible-xs
-          %i.fa.fa-bookmark
-          = t('site.title')
-        %p!= t('home.header')
+        .row.home-header
+          %h1.text-center!= t('home.header')
         .row
           = form_for @blurb, class: 'form-inline' do |f|
             .form-group.col-md-9.col-sm-7
-              = f.text_area :text, class: 'form-control demo-text', rows: 3, placeholder: 'Write what ever you want...'
+              = f.text_area :text, class: 'form-control demo-text',rows: 1, maxlength: 120, placeholder: 'Write what ever you want...'
             .form-group.col-md-3.col-sm-5.text-right.first-blurb
-              %p.timestamp
-                %strong
-                  %i.fa.fa-lock
-                  %span.caplitalize #{t('timestamp').capitalize}:
-                %br.visible-md
-                %span.value= Time.now
-              = f.submit t('home.action'), class: 'btn btn-md btn-primary btn-block'
+              = f.submit t('home.action'), class: 'btn btn-md btn-primary btn-block btn-create-blurb'
+
         .row
-          .col-xs-12
-            %span Predictions created can not be modified in any way, they are timed and locked forever.
+          .col-md-9.col-sm-7
+            %span &nbsp;
+            %i.fa.fa-lock.fa-lg
+            %span Predictions can never be edited and are timestamped when first created.
+          .col-md-3.col-sm-5
+            %span.timestamp
+              %strong
+                %span.caplitalize #{t('timestamp').capitalize}:
+              %br.visible-md
+              %span.value= Time.now
+
     .container
       %br
       .row.why

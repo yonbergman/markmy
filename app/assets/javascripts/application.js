@@ -18,4 +18,9 @@
 //= require moment
 //= require livestamp.min
 //= require underscore
+//= require underscore.string
+//= require_self
 //= require_tree .
+
+window.App = {}
+_.mixin(_.str.exports());

@@ -19,9 +19,7 @@ en:
     copy_link: 'Copy Link'
 
   home:
-    welcome: 'Welcome to'
-    header: 'Share <em>timed predictions</em> with friends and enemies;<br/>The ultimate way to say <strong>I told you so</strong> for the 21st century.'
-    placholder:
+    header: 'Save <strong>predictions</strong> now,<br/> Say <em>"I told you so"</em> later.'
     action: 'Create your first prediction'
 
   why:

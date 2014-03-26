@@ -60,15 +60,22 @@ body > .main-container{
   .why{
     color: $white-text;
   }
-  .first-blurb{
-    p{
-      margin-top: 16px;
-      margin-bottom: 4px;
-      font-size: 14px;
-      text-align: center;
 
-      @include md {
-        margin-top: 0;
+  .demo-text{
+    resize: none;
+    @include mobile {
+      height: 5em;
+    }
+  }
+
+  .home-header{
+    margin-bottom: $jumbotron-padding;
+    @media screen and (min-width: $screen-sm-min) {
+      margin-bottom: ($jumbotron-padding * 1.6);
+    }
+    h1{
+      @include mobile {
+        font-size: 1.6em;
       }
     }
   }

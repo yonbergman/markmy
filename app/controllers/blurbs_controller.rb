@@ -17,7 +17,7 @@ class BlurbsController < ApplicationController
     if @blurb.save
       redirect_to @blurb
     else
-      render action: 'new'
+      render action: 'home'
     end
   end
 
@@ -51,6 +51,6 @@ class BlurbsController < ApplicationController
   end
 
   def blurb_author?
-    
+
   end
 end

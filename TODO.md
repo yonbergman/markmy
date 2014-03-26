@@ -1,5 +1,4 @@
 # First Version
-* Fix stutring when editing the textarea (maybe its the placeholder changes)
 * Better handling of longer texts
 * Background Image Attribution
 * Connect Domain
