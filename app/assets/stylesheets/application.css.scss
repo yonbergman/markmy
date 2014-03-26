@@ -87,4 +87,7 @@ body > .main-container{
 
 .has-link{
   cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
 }

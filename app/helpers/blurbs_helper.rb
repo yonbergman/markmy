@@ -12,12 +12,12 @@ module BlurbsHelper
         data: {
         url: edit_user_registration_path,
         toggle: 'popover',
-        placement: 'top',
+        placement: 'bottom',
         container: 'body',
         trigger: 'hover',
         title: '<i class="fa fa-user"></i> Why am I Anonymous?',
         html: 'true',
-        content: 'You are using a temporary guest account, to <strong>Create Account</strong> and set your name click here.'}
+        content: 'You are using a temporary guest account, click to <strong>Create Account</strong> and set your name.'}
       }
     else
       {}
