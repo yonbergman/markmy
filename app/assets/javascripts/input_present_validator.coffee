@@ -1,7 +1,7 @@
 class App.InputPresentValidator
   constructor: (@$el, @$buttonEl)->
     _.bindAll(@, 'testInput')
-    @$el.on('keyup', @testInput)
+    @$el.on('keyup change', @testInput)
     @testInput()
     # @$buttonEl.addClass('disabled')
 
