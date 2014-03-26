@@ -26,7 +26,7 @@ class Blurb < ActiveRecord::Base
   end
 
   def custom_background?
-    !image_url.path.include? 'http'
+    image_url.path.present? and !image_url.path.include? 'http'
   end
 
 

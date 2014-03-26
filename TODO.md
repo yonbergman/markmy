@@ -15,6 +15,5 @@
 * Public Prediction Feed
 * Heart/like
 * Public/Unlisted
-* Upload an image
 * Design sign_in pages
 * Design my predictions page
