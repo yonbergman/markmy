@@ -1,6 +1,5 @@
 # First Version
 * Better handling of longer texts
-* Background Image Attribution
 * Connect Domain
   * Add Support fo email creation
 

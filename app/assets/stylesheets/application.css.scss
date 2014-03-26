@@ -91,3 +91,14 @@ body > .main-container{
     text-decoration: underline;
   }
 }
+
+.img-attribution{
+  font-size: 11px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  color: rgba(white, 0.7);
+  a{
+    color: rgba(white, 0.6);
+  }
+}

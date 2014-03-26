@@ -2,6 +2,11 @@
   .bg-img
     .bgg{:style => "background-image: url('#{@blurb.image_url}')"}
 
+  .img-attribution
+    Image by
+    = link_to @blurb.image_attribution.author, @blurb.image_attribution.src, target: :_blank
+
+
 #prediction-page
   .prediction-poster{:style => "background-color: #{@blurb.color}"}
     .content
@@ -28,6 +33,7 @@
     = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
 
 
+
 - if author?
   .change-image
     %button.btn.btn-sm.change-image-button{data: {container: 'body', toggle: 'popover', placement: 'bottom'}}
@@ -38,6 +44,7 @@
           %p Change background:
           - Images.moods.each do |mood|
             %button.btn.btn-block.btn-default{type: 'submit', name: 'blurb[mood]', value: mood, class: @blurb.mood==mood && 'btn-primary'}= mood.capitalize
+
 
 :javascript
   copyUrl('#copy-link', #{blurb_url(@blurb).to_json});

@@ -1,42 +1,142 @@
 images:
   tech:
-    - https://farm1.staticflickr.com/25/58379433_9ea61a0aeb_b.jpg
-    - https://farm9.staticflickr.com/8096/8531811319_e961fc00a6_b.jpg
-    - https://farm6.staticflickr.com/5230/5778630247_9b64dff2e7_b.jpg
-    - https://farm4.staticflickr.com/3068/2392587656_a5d0e01757_o.jpg
-    - https://farm2.staticflickr.com/1092/711731769_224980aff3_b.jpg
+    - img: https://farm1.staticflickr.com/25/58379433_9ea61a0aeb_b.jpg
+      src: http://www.flickr.com/photos/mabahamo/58379433/
+      author: mabahamo
+
+    - img: https://farm9.staticflickr.com/8096/8531811319_e961fc00a6_b.jpg
+      src: http://www.flickr.com/photos/hslphotosync/8531811319/
+      author: hslphotosync
+
+    - img: https://farm9.staticflickr.com/8096/8531811319_e961fc00a6_b.jpg
+      src: http://www.flickr.com/photos/techcocktail/5778630247/
+      author: techcocktail
+
+    - img: https://farm4.staticflickr.com/3068/2392587656_a5d0e01757_o.jpg
+      src: http://www.flickr.com/photos/arenamontanus/2392587656/
+      author: arenamontanus
+
+    - img: https://farm2.staticflickr.com/1092/711731769_224980aff3_b.jpg
+      src: http://www.flickr.com/photos/parislemon/711731769/
+      author: parislemon
+
   party:
-    - https://farm6.staticflickr.com/5229/5614979258_f6b9a8b586_b.jpg
-    - https://farm9.staticflickr.com/8436/7914623918_9a2c4d2b24_b.jpg
-    - https://farm2.staticflickr.com/1007/552926523_9fb50d67e2_b.jpg
-    - https://farm5.staticflickr.com/4091/5176259353_15cdf3f3e6_b.jpg
-    - https://farm9.staticflickr.com/8098/8440587393_52cd8deeae_b.jpg
+    - img: https://farm6.staticflickr.com/5229/5614979258_f6b9a8b586_b.jpg
+      src: http://www.flickr.com/photos/otto-yamamoto/5614979258/
+      author: otto-yamamoto
+
+    - img: https://farm9.staticflickr.com/8436/7914623918_9a2c4d2b24_b.jpg
+      src: https://www.flickr.com/photos/aigle_dore/
+      author: aigle_dore
+
+    - img: https://farm2.staticflickr.com/1007/552926523_9fb50d67e2_b.jpg
+      src: http://www.flickr.com/photos/pasotraspaso/552926523/
+      author: pasotraspaso
+
+    - img: https://farm5.staticflickr.com/4091/5176259353_15cdf3f3e6_b.jpg
+      src: http://www.flickr.com/photos/kk/5176259353/
+      author: kk
+
+    - img: https://farm9.staticflickr.com/8098/8440587393_52cd8deeae_b.jpg
+      src: http://www.flickr.com/photos/parislemon/711731769/
+      author: parislemon
   urban:
-    - https://farm4.staticflickr.com/3430/3263900493_3faeb0f582_b.jpg
-    - https://farm4.staticflickr.com/3782/10807425773_8ee367c0fe_b.jpg
-    - https://farm8.staticflickr.com/7431/10859689695_b44ca51846_b.jpg
-    - https://farm4.staticflickr.com/3512/3901370171_4633aaf403_o.jpg
-    - https://farm3.staticflickr.com/2836/10859548575_a2e32512da_b.jpg
-    - https://farm4.staticflickr.com/3019/2865833414_a1cbf0b538_b.jpg
+    - img: https://farm4.staticflickr.com/3430/3263900493_3faeb0f582_b.jpg
+      src: http://www.flickr.com/photos/luciuskwok/3263900493/
+      author: luciuskwok
+
+    - img: https://farm4.staticflickr.com/3782/10807425773_8ee367c0fe_b.jpg
+      src: http://www.flickr.com/photos/city-amsterdam/10807425773/
+      author: city-amsterdam
+
+    - img: https://farm8.staticflickr.com/7431/10859689695_b44ca51846_b.jpg
+      src: http://www.flickr.com/photos/city-amsterdam/10859689695/
+      author: city-amsterdam
+
+    - img: https://farm4.staticflickr.com/3512/3901370171_4633aaf403_o.jpg
+      src: http://www.flickr.com/photos/midorisyu/3901370171/
+      author: midorisyu
+
+    - img: https://farm3.staticflickr.com/2836/10859548575_a2e32512da_b.jpg
+      src: http://www.flickr.com/photos/city-amsterdam/10859548575/
+      author: city-amsterdam
+
+    - img: https://farm4.staticflickr.com/3019/2865833414_a1cbf0b538_b.jpg
+      src: http://www.flickr.com
+      author: Unknown
+
   work:
-    - https://farm5.staticflickr.com/4053/4259151192_19a90b983b_b.jpg
-    - https://farm8.staticflickr.com/7072/7161877319_6c37eabdc1_b.jpg
-    - https://farm8.staticflickr.com/7057/7023561195_f30a5d0281_b.jpg
-    - https://farm3.staticflickr.com/2638/4146183729_7d6ea8e336_b.jpg
-    - https://farm9.staticflickr.com/8218/8346973570_662524b568_b.jpg
+    - img: https://farm5.staticflickr.com/4053/4259151192_19a90b983b_b.jpg
+      src: http://www.flickr.com/photos/btouniversity/4259151192/
+      author: btouniversity
+
+    - img: https://farm8.staticflickr.com/7072/7161877319_6c37eabdc1_b.jpg
+      src: http://www.flickr.com/photos/techcocktail/7161877319/
+      author: techcocktail
+
+    - img: https://farm8.staticflickr.com/7057/7023561195_f30a5d0281_b.jpg
+      src: http://www.flickr.com/photos/j_benson/7023561195/
+      author: j_benson
+
+    - img: https://farm3.staticflickr.com/2638/4146183729_7d6ea8e336_b.jpg
+      src: http://www.flickr.com/photos/meetthemediaguru/4146183729/
+      author: meetthemediaguru
+
+    - img: https://farm9.staticflickr.com/8218/8346973570_662524b568_b.jpg
+      src: http://www.flickr.com/photos/mercedesbenzencino/8346973570/
+      author: mercedesbenzencino
+
   people:
-    - https://farm9.staticflickr.com/8385/8672407236_ba3dd0af1d_b.jpg
-    - https://farm7.staticflickr.com/6004/5980670985_8815dca108_b.jpg
-    - https://farm1.staticflickr.com/76/179279964_8e0675c135_o.jpg
-    - https://farm7.staticflickr.com/6147/5936476818_29937a8dd5_b.jpg
-    - https://farm4.staticflickr.com/3230/2848824545_0f15cd9f83_b.jpg
-    - https://farm1.staticflickr.com/62/230544325_2470c2bc38_b.jpg
+    - img: https://farm9.staticflickr.com/8385/8672407236_ba3dd0af1d_b.jpg
+      src: http://www.flickr.com
+      author: Unknown
+
+    - img: https://farm7.staticflickr.com/6004/5980670985_8815dca108_b.jpg
+      src: http://www.flickr.com/photos/vivevans/5980670985/
+      author: vivevans
+
+    - img: https://farm1.staticflickr.com/76/179279964_8e0675c135_o.jpg
+      src: http://www.flickr.com/photos/pinksherbet/179279964/
+      author: pinksherbet
+
+    - img: https://farm7.staticflickr.com/6147/5936476818_29937a8dd5_b.jpg
+      src: http://www.flickr.com/photos/thomasleuthard/5936476818/
+      author: thomasleuthard
+
+    - img: https://farm4.staticflickr.com/3230/2848824545_0f15cd9f83_b.jpg
+      src: http://www.flickr.com/photos/pfala/2848824545/
+      author: pfala
+
+    - img: https://farm1.staticflickr.com/62/230544325_2470c2bc38_b.jpg
+      src: http://www.flickr.com/photos/kk/230544325/
+      author: kk
+
   nature:
-    - https://farm3.staticflickr.com/2463/3779778870_b54f4939a1_b.jpg
-    - https://farm6.staticflickr.com/5285/5291203955_8567b9a2c6_b.jpg
+    - img: https://farm3.staticflickr.com/2463/3779778870_b54f4939a1_b.jpg
+      src: http://www.flickr.com/photos/sgt_spanky/3779778870/
+      author: sgt_spanky
+
+    - img: https://farm6.staticflickr.com/5285/5291203955_8567b9a2c6_b.jpg
+      src: http://www.flickr.com/photos/htakashi/5291203955/
+      author: htakashi
+
   geek:
-    - https://farm1.staticflickr.com/45/149754989_e7f517336c_b.jpg
-    - https://farm6.staticflickr.com/5497/9449345598_3aaf9c6ab2_b.jpg
-    - https://farm3.staticflickr.com/2465/4011035061_81a3e15124_b.jpg
-    - https://farm7.staticflickr.com/6058/5881463402_ae849458aa_b.jpg
-    - https://farm6.staticflickr.com/5100/5461680474_c7be23cb21_b.jpg
+    - img: https://farm1.staticflickr.com/45/149754989_e7f517336c_b.jpg
+      src: http://www.flickr.com/photos/adulau/149754989/
+      author: adulau
+
+    - img: https://farm6.staticflickr.com/5497/9449345598_3aaf9c6ab2_b.jpg
+      src: http://www.flickr.com/photos/mayeesherr/9449345598/
+      author: mayeesherr
+
+    - img: https://farm3.staticflickr.com/2465/4011035061_81a3e15124_b.jpg
+      src: http://www.flickr.com/photos/blakespot/4011035061/
+      author: blakespot
+
+    - img: https://farm7.staticflickr.com/6058/5881463402_ae849458aa_b.jpg
+      src: http://www.flickr.com/photos/vintagedept/5881463402/
+      author: vintagedept
+
+    - img: https://farm6.staticflickr.com/5100/5461680474_c7be23cb21_b.jpg
+      src: http://www.flickr.com/photos/mrseb/5461680474/
+      author: mrseb

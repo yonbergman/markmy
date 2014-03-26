@@ -21,12 +21,17 @@ class Images
 
   def random_image(mood = nil)
     arr = data[mood].presence || all_images
-    arr.sample
+    arr.sample.img
   end
 
   def mood_for_url(image_url)
-    found = data.find {|mood, images| images.include? image_url}
-    found and found.first
+    info_for_url(image_url).mood
+  end
+
+  def info_for_url(image_url)
+    mood, images = data.find { |mood, images| images.map(&:img).include? image_url }
+    image_info = images.find {|image| image.img == image_url}
+    image_info and image_info.merge(:mood => mood)
   end
 
   def color_for_url(image_url)

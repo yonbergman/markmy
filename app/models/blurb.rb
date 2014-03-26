@@ -15,8 +15,13 @@ class Blurb < ActiveRecord::Base
     user.try(:name).presence || 'Anonymous'
   end
 
+
+  def image_attribution
+    @_image_info ||= image_list.info_for_url(image_url)
+  end
+
   def mood
-    @_mood ||= image_list.mood_for_url(image_url)
+    @_mood ||= image_attribution.mood
   end
 
   def mood=(mood)
