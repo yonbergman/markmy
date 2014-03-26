@@ -9,7 +9,7 @@ class Home
     'Winds of Winter will be relased this year (2014)',
   ]
   constructor: (@$el)->
-    _.bindAll(@, 'run')
+    _.bindAll(@, 'run', 'inputKeyup')
     @ui =
       input: @$el.find('.demo-text')
       btn:   @$el.find('.btn-create-blurb')
@@ -22,6 +22,7 @@ class Home
   bindActions: ->
     @ui.input.on('focus', => @focused = true)
     @ui.input.on('blur', => @focused = false)
+    @ui.input.on('keydown', @inputKeyup)
 
   startInterval: ->
     setTimeout(
@@ -31,6 +32,12 @@ class Home
   run: ->
     return if @focused
     @ui.input.attr('placeholder', _.sample(@texts))
+
+  inputKeyup: (ev) ->
+    if (ev.keyCode == 13) #ENTER
+      ev.preventDefault()
+      $(ev.target).parents('form').submit() unless @ui.btn.hasClass('disabled')
+      return false;
 
 $(document).on 'ready page:load', ->
   el = $('#home')
