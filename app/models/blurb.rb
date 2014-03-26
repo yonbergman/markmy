@@ -7,6 +7,8 @@ class Blurb < ActiveRecord::Base
 
   belongs_to :user
 
+  mount_uploader :image_url, BackgroundUploader
+
   def to_param
     self.token
   end
@@ -15,13 +17,25 @@ class Blurb < ActiveRecord::Base
     user.try(:name).presence || 'Anonymous'
   end
 
+  def background
+    if custom_background?
+      image_url.url
+    else
+      self[:image_url]
+    end
+  end
+
+  def custom_background?
+    !image_url.path.include? 'http'
+  end
+
 
   def image_attribution
-    @_image_info ||= image_list.info_for_url(image_url)
+    @_image_info ||= custom_background? ? nil : image_list.info_for_url(background)
   end
 
   def mood
-    @_mood ||= image_attribution.mood
+    @_mood ||= image_attribution and image_attribution.mood
   end
 
   def mood=(mood)
@@ -29,7 +43,7 @@ class Blurb < ActiveRecord::Base
   end
 
   def color
-    image_list.color_for_url(image_url)
+    image_list.color_for_url(background)
   end
 
   private

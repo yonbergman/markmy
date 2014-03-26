@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
   def home
     @blurb = Blurb.new
-
   end
 
   def create_and_sign_in_guest_account

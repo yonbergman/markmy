@@ -1,10 +1,11 @@
 - content_for :on_body do
   .bg-img
-    .bgg{:style => "background-image: url('#{@blurb.image_url}')"}
+    .bgg{:style => "background-image: url('#{@blurb.background}')"}
 
-  .img-attribution
-    Image by
-    = link_to @blurb.image_attribution.author, @blurb.image_attribution.src, target: :_blank
+  - unless @blurb.custom_background?
+    .img-attribution
+      Image by
+      = link_to @blurb.image_attribution.author, @blurb.image_attribution.src, target: :_blank
 
 
 #prediction-page
@@ -33,7 +34,6 @@
     = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
 
 
-
 - if author?
   .change-image
     %button.btn.btn-sm.change-image-button{data: {container: 'body', toggle: 'popover', placement: 'bottom'}}
@@ -44,6 +44,17 @@
           %p Change background:
           - Images.moods.each do |mood|
             %button.btn.btn-block.btn-default{type: 'submit', name: 'blurb[mood]', value: mood, class: @blurb.mood==mood && 'btn-primary'}= mood.capitalize
+
+      %br
+      = direct_upload_form_for @uploader, :'data-no-turbolink'=> true do |f|
+        = f.file_field :image_url, class: 'hidden file-input', accept: "image/*"
+        %button.btn-upload-file.btn.btn-block.btn-default{type: 'button'}
+          %span.before
+            %i.fa.fa-picture-o
+            %span Upload Image
+          %span.during.hidden
+            %i.fa.fa-spinner.fa-spin
+            %span Uploading...
 
 
 :javascript

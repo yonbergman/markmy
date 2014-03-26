@@ -1,7 +1,7 @@
 class BlurbsController < ApplicationController
-  before_action :current_blurb, only: [:show, :destroy, :update]
+  before_action :current_blurb, only: [:show, :destroy, :update, :update_background]
 
-  before_filter :authenticate_user!, only: [:index, :update]
+  before_filter :authenticate_user!, only: [:index, :update, :update_background]
 
   def index
     @title = I18n.translate('my_predictions')
@@ -9,6 +9,8 @@ class BlurbsController < ApplicationController
   end
 
   def show
+    @uploader = @blurb.image_url
+    @uploader.success_action_redirect = blurb_update_background_url(@blurb)
   end
 
   def create
@@ -26,6 +28,11 @@ class BlurbsController < ApplicationController
     redirect_to @blurb
   end
 
+  def update_background
+    @blurb.update(image_url: params.require(:key))
+    redirect_to @blurb
+  end
+
   def destroy
     @blurb.destroy
     redirect_to blurbs_url
@@ -33,7 +40,7 @@ class BlurbsController < ApplicationController
 
   private
   def current_blurb
-    @blurb ||= Blurb.find_by(token: params[:id])
+    @blurb ||= Blurb.find_by(token: params[:blurb_id] || params[:id])
     @title = @blurb.text
   end
 
