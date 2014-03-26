@@ -49,7 +49,7 @@ class Blurb < ActiveRecord::Base
   private
 
   def set_default_values
-    self.image_url ||= image_list.random_image
+    self[:image_url] ||= image_list.random_image
     self.token  ||= SecureRandom.urlsafe_base64(TOKEN_LENGTH)
     self.time   ||= DateTime.now
   end
