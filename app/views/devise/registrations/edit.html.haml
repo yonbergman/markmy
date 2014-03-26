@@ -1,18 +1,21 @@
 .well
-  %h2 Create Account
+  %h2
+    Create Account
+    %small
+      or
+      = link_to 'Sign In', new_user_session_path
+      if you already have an account.
+
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
     = devise_error_messages!
     .form-group
       = f.label :name
       %br/
-      = f.text_field :name, :autofocus => true, class: 'form-control'
+      = f.text_field :name, value: nil, :autofocus => true, class: 'form-control'
     .form-group
       = f.label :email
       %br/
-      = f.email_field :email, class: 'form-control'
-    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-      .form-group
-        Currently waiting confirmation for: #{resource.unconfirmed_email}
+      = f.email_field :email, value: nil,class: 'form-control'
     .form-group
       = f.label :password
       %br/

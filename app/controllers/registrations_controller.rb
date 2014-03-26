@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  before_filter :hide_guest_password, :only => [:edit]
+  before_filter :just_for_guest_accounts, only: [:edit, :update]
 
   def new
     build_resource({})
@@ -10,13 +10,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     account_update_params = devise_parameter_sanitizer.sanitize(:account_update)
-    # 
-    # # required for settings form to submit when password is left blank
-    # if account_update_params[:password].blank?
-    #   account_update_params.delete("password")
-    #   account_update_params.delete("password_confirmation")
-    # end
-
     @user = User.find(current_user.id)
     @user.guest_account = false
     if @user.update_attributes(account_update_params)
@@ -28,13 +21,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  private
-
-  def hide_guest_password
-    if current_user.guest_account?
-      current_user.name = nil
-      current_user.email = nil
-    end
+  def just_for_guest_accounts
+    require_no_authentication if user_signed_in? and !current_user.guest_account?
   end
-
 end
