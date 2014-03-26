@@ -21,6 +21,8 @@ en:
   home:
     header: 'Save <strong>predictions</strong> now,<br/> Say <em>"I told you so"</em> later.'
     action: 'Create your first prediction'
+    placeholder: 'Write what ever you want...'
+    note: 'Predictions can never be edited and are timestamped when first created.'
 
   why:
     timestamped:

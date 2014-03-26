@@ -11,7 +11,7 @@
         .row
           = form_for @blurb, class: 'form-inline' do |f|
             .form-group.col-md-9.col-sm-7
-              = f.text_area :text, class: 'form-control demo-text',rows: 1, maxlength: 120, placeholder: 'Write what ever you want...'
+              = f.text_area :text, class: 'form-control demo-text',rows: 1, maxlength: 120, placeholder: t('home.placeholder')
             .form-group.col-md-3.col-sm-5.text-right.first-blurb
               = f.submit t('home.action'), class: 'btn btn-md btn-primary btn-block btn-create-blurb'
 
@@ -19,7 +19,7 @@
           .col-md-9.col-sm-7
             %span &nbsp;
             %i.fa.fa-lock.fa-lg
-            %span Predictions can never be edited and are timestamped when first created.
+            %span= t('home.note')
           .col-md-3.col-sm-5
             %span.timestamp
               %strong
