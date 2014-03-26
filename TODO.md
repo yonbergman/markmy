@@ -3,7 +3,6 @@
 * Background Image Attribution
 * Connect Domain
   * Add Support fo email creation
-* Missing Content in Landing Page
 
 # Next Version
 * Create prediction open in popup

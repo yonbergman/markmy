@@ -89,9 +89,6 @@
   @include filter(
     blur(0)
   ); // WEBKIT ISSUE WITH OVERFLOW
-  @include transform(
-    translate3d(0,0,0)
-  );
 
   .bgg,img{
     position: absolute;
