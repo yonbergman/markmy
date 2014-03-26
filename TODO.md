@@ -1,19 +1,23 @@
 # First Version
-* flash message "You are now using a temporary guest account, to be able to return to this prediction create an account"
-* Add Support fo email creation
-* better handling longer texts
-* image attribution
+* Fix stutring when editing the textarea (maybe its the placeholder changes)
+* Better handling of longer texts
+* Background Image Attribution
+* Connect Domain
+  * Add Support fo email creation
+* Missing Content in Landing Page
 
 # Next Version
-* Create prediction in popup
-* Add Support fo twitter creation
+* Create prediction open in popup
+* Add Support for twitter creation (@markmyapp)
 * Add notification feature / Due date
 
 # Future
 * Content review
 * Add Comments?
 * search for image based on text?
-* Feed
+* Public Prediction Feed
 * Heart/like
 * Public/Unlisted
 * Upload an image
+* Design sign_in pages
+* Design my predictions page

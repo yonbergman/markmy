@@ -10,13 +10,15 @@ class DemoText
   constructor: (@$el)->
     _.bindAll(@, 'run')
     @originalPlaceholder = @$el.attr('placeholder')
+    @focused = false
+    @$el.on('focus', => @focused = true)
+    @$el.on('blur', => @focused = false)
     setTimeout(
       ( => @run(); setInterval(@run, 2400) )
     , 1800)
 
-
   run: ->
-    # @$el.attr('placeholder', @originalPlaceholder + '        ... ' + _.sample(@texts))
+    return if @focused
     @$el.attr('placeholder', _.sample(@texts))
 
 $(document).on 'ready page:load', ->
