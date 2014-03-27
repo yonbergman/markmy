@@ -30,8 +30,75 @@
       }
     }
   }
+  .form-container{
+    @extend .col-md-8;
+    @extend .col-md-offset-2;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    .demo-text {
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .tooltip{
+    .tooltip-arrow{
+      border-top-color: rgba(black, 0.6);;
+    }
+    .tooltip-inner{
+      background: rgba(black, 0.6);
+      color: white;
+    }
+  }
 }
 
 .jumbotron{
   background: rgba(white, 0.6);
+}
+
+.typed-overlay{
+  position: overlay;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @extend .demo-text;
+  cursor: text;
+}
+
+#typed-cursor{
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

@@ -1,8 +1,22 @@
+#= require jquery.shake
 class App.InputPresentValidator
   constructor: (@$el, @$buttonEl)->
-    _.bindAll(@, 'testInput')
+    _.bindAll(@, 'testInput', 'submit')
     @$el.on('keyup change', @testInput)
+    @$el.parents('form').on('submit', @submit)
     @testInput()
 
   testInput: ->
-    @$buttonEl.toggleClass('disabled', _.isBlank(@$el.val()))
+    @$buttonEl.toggleClass('pseudo-disabled', _.isBlank(@$el.val()))
+
+  submit: (ev)->
+    if _.isBlank(@$el.val())
+      ev.preventDefault()
+      @$buttonEl.shake()
+      @$buttonEl.tooltip(title: 'Enter a prediction', trigger: 'manual')
+      @$buttonEl.tooltip('show')
+      setTimeout(
+        (=> @$buttonEl.tooltip('destroy').show())
+        , 1200
+      )
+      # @$el.focus()

@@ -12,10 +12,11 @@
           = t('site.title')
       #navigation-actions.collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li
-            = link_to new_blurb_path do
-              %i.fa.fa-plus
-              = t('nav.create_prediction')
+          - unless @in_home
+            %li
+              = link_to new_blurb_path do
+                %i.fa.fa-plus
+                = t('nav.create_prediction')
           %li
             = link_to my_blurbs_path do
               %i.fa.fa-list-ul

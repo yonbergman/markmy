@@ -1,3 +1,4 @@
+- @in_home = true
 - @noheight = true
 - content_for :on_body do
   .bg-img
@@ -14,24 +15,21 @@
       .container
         .row.home-header
           %h1.text-center!= t('home.header')
-        .row
+        .row.form-container
           = form_for @blurb, class: 'form-inline' do |f|
-            .form-group.col-md-9.col-sm-7
+            .form-group.col-sm-12
               = f.text_area :text, class: 'form-control demo-text',rows: 1, maxlength: 120, placeholder: t('home.placeholder')
-            .form-group.col-md-3.col-sm-5.text-right.first-blurb
-              = f.submit t('home.action'), class: 'btn btn-md btn-primary btn-block btn-create-blurb'
+              .typed-overlay.form-control
+                %span.text
+            .form-group.col-sm-12
+              = f.submit t('home.action'), class: 'btn btn-lg btn-primary btn-block btn-create-blurb'
 
         .row
-          .col-md-9.col-sm-7
+          .col-sm-12.text-center
+            %br
             %span &nbsp;
             %i.fa.fa-lock.fa-lg
             %span= t('home.note')
-          .col-md-3.col-sm-5
-            %span.timestamp
-              %strong
-                %span.caplitalize #{t('timestamp').capitalize}:
-              %br.visible-md
-              %span.value= Time.now
 
     .container
       %br
