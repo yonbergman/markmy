@@ -8,6 +8,11 @@ $(document).on 'ready page:load', ->
     el = $(ev.target)
     if el.data('toggle') != 'popover' && el.parents('.change-image-button').length == 0 && el.parents('.popover.in').length == 0
       $('.change-image-button').popover('hide')
-  # $('.btn-share-link').click (ev)->
-  #   ev.preventDefault();
+
+
   copyUrl($('.btn-share-link'), $('.btn-share-link').attr('href'))
+
+  $('.btn-share[data-width]').on 'click', (ev) ->
+    ev.preventDefault()
+    $el = $(ev.target).closest('.btn-share')
+    window.open($el.attr('href'), '', "height=#{$el.data('height')}, width=#{$el.data('width')}")

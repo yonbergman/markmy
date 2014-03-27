@@ -19,9 +19,9 @@
   .notice!= t('blurb.notice', time: @blurb.time)
 
   .share-buttons.row.text-center
-    = link_to facebook_share_url, target: :_blank , class: 'btn-share btn-share-facebook' do
+    = link_to facebook_share_url, target: :_blank , class: 'btn-share btn-share-facebook', data: {width: 600, height: 300}  do
       %i.fa.fa-facebook
-    = link_to twitter_share_url, target: :_blank , class: 'btn-share btn-share-twitter' do
+    = link_to twitter_share_url, target: :_blank , class: 'btn-share btn-share-twitter', data: {width: 550, height: 420}  do
       %i.fa.fa-twitter
     = mail_to nil, subject: 'Check out this prediction from Mark.My', body: "\"#{@blurb.text.strip}\"\n - #{@blurb.username}, #{time_ago_in_words(@blurb.time)} ago\n\nYou can find this predication and more at #{blurb_url(@blurb)}", class: 'btn-share btn-share-mail' do
       %i.fa.fa-envelope
