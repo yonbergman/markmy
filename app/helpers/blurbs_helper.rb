@@ -1,5 +1,20 @@
 module BlurbsHelper
 
+  def twitter_share_url
+    'https://twitter.com/share?' + {
+      url: blurb_url(@blurb),
+      text: t('blurb.share_description'),
+      via: 'MarkMyApp'
+    }.to_param
+  end
+
+  def facebook_share_url
+    'https://www.facebook.com/sharer/sharer.php?' + {
+      u: blurb_url(@blurb),
+    }.to_param
+  end
+
+
   def author?
     @blurb.user == current_user
   end

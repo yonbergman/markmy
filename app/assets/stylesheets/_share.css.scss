@@ -12,3 +12,28 @@ nav.share iframe {max-height:20px; border:0; margin-top:0; padding-top:0;} /* if
   display: inline-block !important;
   width: auto !important;
 }
+
+
+.btn-share{
+  color: white;
+  background: rgba(white, 0.5);
+  cursor: pointer;
+  &:hover, &.hover{
+    background: rgba(white, 0.7);
+    color: white;
+  }
+  &:active, &.active{
+    background: rgba(white, 0.7);
+    @include box-shadow(0 3px 4px 0px rgba(black,0.3) inset);
+    color: white;
+  }
+  @include border-radius(5px);
+  text-align: center;
+  @include inline-block();
+  margin-right: 20px;
+  font-size: 4em;
+  $ratio: 1.4em;
+  width: $ratio;
+  height: $ratio;
+  line-height: $ratio;
+}

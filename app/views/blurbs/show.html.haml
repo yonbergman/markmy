@@ -18,19 +18,15 @@
           %span.timeago{'data-livestamp' => @blurb.time.to_i} #{time_ago_in_words(@blurb.time)} ago
   .notice!= t('blurb.notice', time: @blurb.time)
 
-  .share-row
-    .copy-link.hidden-xs
-      .input-group
-        %input.form-control{type: "text", value: blurb_url(@blurb)}
-        %span.input-group-btn
-          %button.btn.btn-default#copy-link{type: "button"}
-            %i.fa.fa-link
-            %span= t('blurb.copy_link')
-    = render_shareable :url => blurb_url(@blurb), :buttons=> ['facebook', 'twitter'], :text => "#{t('blurb.share_description')} #{@blurb.text}"
+  .share-buttons.row.text-center
+    = link_to facebook_share_url, target: :_blank , class: 'btn-share btn-share-facebook' do
+      %i.fa.fa-facebook
+    = link_to twitter_share_url, target: :_blank , class: 'btn-share btn-share-twitter' do
+      %i.fa.fa-twitter
+    = mail_to nil, subject: 'Check out this prediction from Mark.My', body: "\"#{@blurb.text.strip}\"\n - #{@blurb.username}, #{time_ago_in_words(@blurb.time)} ago\n\nYou can find this predication and more at #{blurb_url(@blurb)}", class: 'btn-share btn-share-mail' do
+      %i.fa.fa-envelope
+    = link_to blurb_url(@blurb), class: 'btn-share btn-share-link' do
+      %i.fa.fa-link
 
 - if author?
   = render 'blurbs/change_image'
-
-
-:javascript
-  copyUrl('#copy-link', #{blurb_url(@blurb).to_json});

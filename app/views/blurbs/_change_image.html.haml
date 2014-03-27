@@ -1,0 +1,23 @@
+.change-image
+  %button.btn.btn-sm.change-image-button{data: {container: 'body', toggle: 'popover', placement: 'bottom'}}
+    %i.fa.fa-picture-o
+  .moods.hidden
+    = form_for(@blurb) do |f|
+      .btn-group
+        %p= t('blurb.background.title')
+        - Images.moods.each do |mood|
+          %button.btn.btn-block.btn-default{type: 'submit', name: 'blurb[mood]', value: mood, class: @blurb.mood==mood && 'btn-primary'}
+            - if @blurb.mood==mood
+              %i.fa.fa-refresh.text-right
+            %span= mood.capitalize
+
+    %br
+    = direct_upload_form_for @uploader, :'data-no-turbolink'=> true do |f|
+      = f.file_field :image_url, class: 'hidden file-input', accept: "image/*"
+      %button.btn-upload-file.btn.btn-block.btn-default{type: 'button'}
+        %span.before
+          %i.fa.fa-picture-o
+          %span= t('blurb.background.uploading.before')
+        %span.during.hidden
+          %i.fa.fa-spinner.fa-spin
+          %span= t('blurb.background.uploading.during')
