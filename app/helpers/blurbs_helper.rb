@@ -15,9 +15,11 @@ module BlurbsHelper
         placement: 'bottom',
         container: 'body',
         trigger: 'hover',
-        title: '<i class="fa fa-user"></i> Why am I Anonymous?',
+        # title: '<i class="fa fa-user"></i> Click to set your name',
         html: 'true',
-        content: 'You are using a temporary guest account, click to <strong>Create Account</strong> and set your name.'}
+        # content: 'You are using a temporary guest account, click to <strong>Create Account</strong> and set your name.'}
+        content:  '<i class="fa fa-user"></i> Click to set your name'
+        }
       }
     else
       {}

@@ -5,7 +5,8 @@ $brand-primary: $color;
 $tooltip-color: rgba(0,0,0,0.9);
 $tooltip-bg: white;
 
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,200);
+
 @import 'compass';
 @import 'bootstrap';
 @import 'font-awesome';
@@ -14,6 +15,7 @@ $tooltip-bg: white;
 @import 'blurb';
 @import 'share';
 @import 'prediction';
+@import 'home';
 
 
 html, body{
@@ -21,7 +23,7 @@ html, body{
 }
 
 body{
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background: $color;
   padding-bottom: 70px;
   position: relative;
@@ -55,35 +57,6 @@ body > .main-container{
   width: 100%;
 }
 
-
-#home{
-  .why{
-    color: $white-text;
-  }
-
-  .demo-text{
-    resize: none;
-    @include mobile {
-      height: 5em;
-    }
-  }
-
-  .home-header{
-    margin-bottom: $jumbotron-padding;
-    @media screen and (min-width: $screen-sm-min) {
-      margin-bottom: ($jumbotron-padding * 1.6);
-    }
-    h1{
-      @include mobile {
-        font-size: 1.6em;
-      }
-    }
-  }
-}
-
-.jumbotron{
-  background: rgba(white, 0.6);
-}
 
 .has-link{
   cursor: pointer;

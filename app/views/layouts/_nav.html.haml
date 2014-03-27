@@ -22,15 +22,16 @@
               = t('my_predictions')
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
-            %li
-              .navbar-text
-                %span= t('nav.user.signed_in_as')
-                %strong= current_user.name
             - if current_user.guest_account?
               %li
                 = link_to t('nav.user.create_account'), edit_user_registration_path
-            %li
-              = link_to t('nav.user.sign_out'), destroy_user_session_path, method: 'DELETE'
+            - else
+              %li
+                .navbar-text
+                  %span= t('nav.user.signed_in_as')
+                  %strong= current_user.name
+              %li
+                = link_to t('nav.user.sign_out'), destroy_user_session_path, method: 'DELETE'
           - else
             %li
               = link_to t('nav.user.sign_in'), new_user_session_path

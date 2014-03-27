@@ -4,6 +4,7 @@ en:
   predictions: 'predictions'
   my_predictions: 'My Predictions'
   note: 'Note'
+  image_attribution: 'Image by'
 
   site:
     title: 'Mark.My'
@@ -17,6 +18,13 @@ en:
     share: 'Share'
     share_description: 'Mark my words:'
     copy_link: 'Copy Link'
+    notice: 'This prediction was created on <em>%{time}</em> and was locked for changes since'
+    background:
+      title: 'Change background:'
+      upload:
+        before: 'Upload Image'
+        during: 'Uploading...'
+
 
   home:
     header: 'Save <strong>predictions</strong> now,<br/> Say <em>"I told you so"</em> later.'
