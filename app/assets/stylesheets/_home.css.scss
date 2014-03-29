@@ -2,6 +2,12 @@
 #home{
   .why{
     color: $white-text;
+    @include text-shadow(0 0 2px rgba(black, 0.9));
+    .whys{
+      background: rgba($color, 0.3);
+      @include border-radius(10px);
+    }
+
   }
 
   .demo-text{
@@ -30,13 +36,21 @@
       }
     }
   }
-  .form-container{
+  .form-container-centered{
     @extend .col-md-8;
     @extend .col-md-offset-2;
+    .form-group{
+      margin-bottom: 0;
+    }
+    padding: 0;
+  }
+  .form-container{
     background: white;
     padding: 15px;
     border-radius: 10px;
+
     .demo-text {
+      font-size: 1.3em;
       background: none;
       border: none;
       box-shadow: none;
@@ -51,6 +65,10 @@
       color: white;
     }
   }
+}
+.btn-create-blurb{
+  margin-top: 15px;
+  font-size: 1.4em;
 }
 
 .jumbotron{

@@ -24,6 +24,7 @@ class Home
     @ui.overlay.on('click', @wantToEdit)
     @ui.input.on('keydown', @inputKeyup)
     @ui.input.on('blur', @blur)
+    @ui.input.on('focus-now', @wantToEdit)
 
   wantToEdit: ->
     @ui.overlay.hide()

@@ -36,15 +36,15 @@ en:
     timestamped:
       title: 'Time Stamped'
       icon: 'fa-clock-o'
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.'
+      content: 'Each prediction is timestamped when first created with millisecond resolution. The timestampe is not editable and configured to Coordinated Universal Time (UTC).'
     secure:
       title: 'Secure'
       icon: 'fa-lock'
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.'
+      content: 'The predictions are locked, they are not editable by anyone once created. Ensuring that your friends (or enemies) believe that you made the prediction that you said you did.'
     share:
-      title: 'Share'
+      title: 'Shareable'
       icon: 'fa-share'
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita prorsus, inquam; Videamus igitur sententias eorum, tum ad verba redeamus. Non potes, nisi retexueris illa. Non igitur bene. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Nunc omni virtuti vitium contrario nomine opponitur. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Urgent tamen et nihil remittunt.'
+      content: 'Use one of the built in sharing mechanizms (Facebook, Twitter, Email) or just copy the link and share either before or after your prediction came true.'
 
   nav:
     create_prediction: 'Create Prediction'

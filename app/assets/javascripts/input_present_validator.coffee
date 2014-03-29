@@ -12,6 +12,7 @@ class App.InputPresentValidator
   submit: (ev)->
     if _.isBlank(@$el.val())
       ev.preventDefault()
+      @$el.trigger('focus-now')
       @$buttonEl.shake()
       @$buttonEl.tooltip(title: 'Enter a prediction', trigger: 'manual')
       @$buttonEl.tooltip('show')
@@ -19,4 +20,3 @@ class App.InputPresentValidator
         (=> @$buttonEl.tooltip('destroy').show())
         , 1200
       )
-      # @$el.focus()

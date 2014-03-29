@@ -29,6 +29,7 @@ gem 'underscore-rails'
 group :development, :test do
   gem 'powder'
   gem 'debugger'
+  gem 'i18n-tasks', '~> 0.3.9'
 end
 
 group :production do

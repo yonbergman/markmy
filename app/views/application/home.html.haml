@@ -5,23 +5,23 @@
     .bgg{:style => "background-image: url('https://farm1.staticflickr.com/45/149754989_e7f517336c_b.jpg')"}
 
   .img-attribution
-    Image by
+    = t('image-attribution')
     = link_to 'adulau', 'http://www.flickr.com/photos/adulau/149754989/', target: :_blank
-
-
 
   #home
     .jumbotron
       .container
         .row.home-header
           %h1.text-center!= t('home.header')
-        .row.form-container
-          = form_for @blurb, class: 'form-inline' do |f|
-            .form-group.col-sm-12
-              = f.text_area :text, class: 'form-control demo-text',rows: 1, maxlength: 120, placeholder: t('home.placeholder')
-              .typed-overlay.form-control
-                %span.text
-            .form-group.col-sm-12
+        = form_for @blurb do |f|
+          .row
+            .form-container.form-container-centered
+              .form-group
+                = f.text_area :text, class: 'form-control demo-text',rows: 1, maxlength: 120, placeholder: t('home.placeholder')
+                .typed-overlay.form-control
+                  %span.text
+          .row
+            .form-container-centered
               = f.submit t('home.action'), class: 'btn btn-lg btn-primary btn-block btn-create-blurb'
 
         .row
@@ -35,19 +35,12 @@
       %br
       .row.why
         .col-xs-10.col-xs-offset-1
-          .row
+          .row.whys
             - %w(why.timestamped why.secure why.share).each do |scope|
               .col-sm-4
-                %i.fa.fa-5x{class: t('icon', scope: scope)}
-                %h2= t('title', scope: scope)
+                %i.fa.fa-5x.hidden-xs{class: t('icon', scope: scope)}
+                %h2
+                  %i.fa.hidden-md.hidden-lg.hidden-sm{class: t('icon', scope: scope)}
+                  %span= t('title', scope: scope)
                 %hr
                 %p= t('content', scope: scope)
-
-      :javascript
-        el = $('.timestamp .value')
-        run = function(){el.text(moment().format('YYYY-MM-DD HH:mm:ss'))}
-        run();
-        setInterval(
-          function() { run(); }
-          , 250
-          )
