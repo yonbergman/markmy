@@ -15,9 +15,7 @@ en:
   blurb:
     who: '%{user} said:'
     timeago: '%{time} ago'
-    share: 'Share'
     share_description: 'Mark my words:'
-    copy_link: 'Copy Link'
     notice: 'This prediction was created on <em>%{time}</em> and was locked for changes since'
     background:
       title: 'Change background:'
