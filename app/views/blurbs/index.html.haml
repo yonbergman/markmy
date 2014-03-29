@@ -3,11 +3,11 @@
     .text-center
       %h1
         %i.fa.fa-frown-o
-        No Predictions
+        = t('.no_predictions')
       %p
-        You don't have any predictions yet,
-        create your first prediction today!.
-      = link_to "Create my first prediction", new_blurb_path, class: 'btn btn-default btn-md'
+        = t('.you_dont_have_any_predictions_')
+        = t('.create_your_first_prediction_t')
+      = link_to t('.create_my_first_prediction'), new_blurb_path, class: 'btn btn-default btn-md'
 
   - else
     %h1= t('my_predictions')
@@ -16,7 +16,7 @@
         %i.fa.fa-warning-sign.fa-lg
         %strong #{t('note')}:
         %span= t('my_predictions_page.note.a')
-        = link_to 'Create Account', edit_user_registration_path
+        = link_to t('.create_account'), edit_user_registration_path
         %span= t('my_predictions_page.note.b')
 
     .row

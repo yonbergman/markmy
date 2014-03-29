@@ -1,58 +1,79 @@
+---
 en:
-  timestamp: 'timestamp'
-  prediction: 'prediction'
-  predictions: 'predictions'
-  my_predictions: 'My Predictions'
-  note: 'Note'
-  image_attribution: 'Image by'
-
-  site:
-    title: 'Mark.My'
-    description: 'Mark.My is the a new way to share timed predictions with friends and enemies; The ultimate way to say I told you so for the 21st century.'
-    footer:
-      copyright: '© 2014'
-
   blurb:
-    who: '%{user} said:'
-    timeago: '%{time} ago'
-    share_description: 'Mark my words:'
-    notice: 'This prediction was created on <em>%{time}</em> and was locked for changes since'
     background:
       title: 'Change background:'
       upload:
-        before: 'Upload Image'
-        during: 'Uploading...'
+        before: Upload Image
+        during: Uploading...
+    share_description: 'Mark my words:'
 
-
+    who: '%{user} said:'
+  blurbs:
+    index:
+      create_account: Create Account
+      create_my_first_prediction: Create my first prediction
+      create_your_first_prediction_t: create your first prediction today!.
+      no_predictions: No Predictions
+      you_dont_have_any_predictions_: You don't have any predictions yet,
+    show:
+      username: '%{username},'
+      timeago: '%{time} ago'
+      notice: This prediction was created on <em>%{time}</em> and was locked for changes
+        since
+      email-subject: 'Check out this prediction from Mark.My'
+      email-body: "\"%{text}\"\n - %{username}, %{timeago}\n\nYou can find this predication and more at %{link}"
   home:
-    header: 'Save <strong>predictions</strong> now,<br/> Say <em>"I told you so"</em> later.'
-    action: 'Create your first prediction'
-    placeholder: 'Write what ever you want...'
-    note: 'Predictions can never be edited and are timestamped when first created.'
-
-  why:
-    timestamped:
-      title: 'Time Stamped'
-      icon: 'fa-clock-o'
-      content: 'Each prediction is timestamped when first created with millisecond resolution. The timestampe is not editable and configured to Coordinated Universal Time (UTC).'
-    secure:
-      title: 'Secure'
-      icon: 'fa-lock'
-      content: 'The predictions are locked, they are not editable by anyone once created. Ensuring that your friends (or enemies) believe that you made the prediction that you said you did.'
-    share:
-      title: 'Shareable'
-      icon: 'fa-share'
-      content: 'Use one of the built in sharing mechanizms (Facebook, Twitter, Email) or just copy the link and share either before or after your prediction came true.'
-
-  nav:
-    create_prediction: 'Create Prediction'
-    user:
-      signed_in_as: 'Signed in as'
-      create_account: 'Create Account'
-      sign_in: 'Sign in'
-      sign_out: 'Sign Out'
-
+    action: Create your first prediction
+    header: Save <strong>predictions</strong> now,<br/> Say <em>"I told you so"</em>
+      later.
+    note: Predictions can never be edited and are timestamped when first created.
+    placeholder: Write what ever you want...
+  image_attribution: Image by
+  layouts:
+    footer:
+      giladgo: '@giladgo'
+      yonbergman: '@yonbergman'
+    nav:
+      toggle_navigation: Toggle navigation
+  my_predictions: My Predictions
   my_predictions_page:
     note:
-      a: 'You are using a guest account'
-      b: 'to be able to comeback here later'
+      a: You are using a guest account
+      b: to be able to comeback here later
+  nav:
+    create_prediction: Create Prediction
+    user:
+      create_account: Create Account
+      sign_in: Sign in
+      sign_out: Sign Out
+      signed_in_as: Signed in as
+  note: Note
+  prediction: prediction
+  predictions: predictions
+  site:
+    description: Mark.My is the a new way to share timed predictions with friends
+      and enemies; The ultimate way to say I told you so for the 21st century.
+    footer:
+      copyright: © 2014
+    title: Mark.My
+  timestamp: timestamp
+  why:
+    secure:
+      content: The predictions are locked, they are not editable by anyone once created.
+        Ensuring that your friends (or enemies) believe that you made the prediction
+        that you said you did.
+      icon: fa-lock
+      title: Secure
+    share:
+      content: Use one of the built in sharing mechanizms (Facebook, Twitter, Email)
+        or just copy the link and share either before or after your prediction came
+        true.
+      icon: fa-share
+      title: Shareable
+    timestamped:
+      content: Each prediction is timestamped when first created with millisecond
+        resolution. The timestampe is not editable and configured to Coordinated Universal
+        Time (UTC).
+      icon: fa-clock-o
+      title: Time Stamped
