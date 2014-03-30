@@ -60,20 +60,14 @@ en:
   timestamp: timestamp
   why:
     secure:
-      content: The predictions are locked, they are not editable by anyone once created.
-        Ensuring that your friends (or enemies) believe that you made the prediction
-        that you said you did.
+      content: All predictions are locked so as not to be edited or tampered with by anyone once created, ensuring that your friends (or enemies) believe that you made the prediction you say you did.
       icon: fa-lock
       title: Secure
     share:
-      content: Use one of the built in sharing mechanizms (Facebook, Twitter, Email)
-        or just copy the link and share either before or after your prediction came
-        true.
+      content: Use one of the built-in sharing mechanisms (Facebook, Twitter, email) or just copy the given link to share your prediction either before or after it comes true.
       icon: fa-share
       title: Shareable
     timestamped:
-      content: Each prediction is timestamped when first created with millisecond
-        resolution. The timestampe is not editable and configured to Coordinated Universal
-        Time (UTC).
+      content: Each of your predictions is timestamped when first created with millisecond resolution. The timestamp is not editable and configured to Coordinated Universal Time (UTC).
       icon: fa-clock-o
       title: Time Stamped
