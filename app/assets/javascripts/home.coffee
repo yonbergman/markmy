@@ -37,6 +37,7 @@ class Home
       strings: [@originalPlaceholder].concat(@texts)
       loop: true
       backDelay: 1800, # pause before backspacing
+      # startDelay: 1000
     )
 
   inputKeyup: (ev) ->

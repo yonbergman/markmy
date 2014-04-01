@@ -2,13 +2,7 @@
 #home{
   .why{
     color: $white-text;
-    @include text-shadow(0 0 2px rgba(black, 0.9));
-    .whys{
-      background: rgba($color, 0.3);
-      @include border-radius(10px);
-      padding: 15px 0;
-    }
-
+    @include text-shadow(0 1px 2px black);
   }
 
   .demo-text{
@@ -49,6 +43,7 @@
     background: white;
     padding: 15px;
     border-radius: 10px;
+    @include box-shadow(1px 2px 0 1px rgba(black, 0.35) inset);
 
     .demo-text {
       font-size: 1.3em;
@@ -73,7 +68,7 @@
 }
 
 .jumbotron{
-  background: rgba(white, 0.6);
+  background: rgba(white, 0.75);
 }
 
 .typed-overlay{
@@ -85,6 +80,7 @@
   bottom: 0;
   @extend .demo-text;
   cursor: text;
+  color: #999;
 }
 
 #typed-cursor{
