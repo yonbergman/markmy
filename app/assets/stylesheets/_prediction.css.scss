@@ -56,6 +56,14 @@
   @include xs {
     font-size: 11px;
   }
+
+  @media screen and (max-height: 800px) and (min-width: $screen-lg-min){
+    font-size: 11px;
+  }
+
+  @media screen and (max-height: 640px) and (min-width: $screen-lg-min){
+    font-size: 9px;
+  }
   width: 38em;
   margin: - $navbar-margin-bottom auto 0 auto;
   padding-top: $navbar-margin-bottom;
