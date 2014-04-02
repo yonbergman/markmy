@@ -211,3 +211,32 @@ images:
     - img: https://farm6.staticflickr.com/5100/5461680474_c7be23cb21_b.jpg
       src: http://www.flickr.com/photos/mrseb/5461680474/
       author: mrseb
+
+  sports:
+    - img: http://37.media.tumblr.com/6755c171c47e020419102fb49d3e6f5e/tumblr_n381rrGEmG1st5lhmo1_1280.jpg
+      src: http://victorframeofmind.tumblr.com/
+      author: Victor Erixon
+
+    - img: http://cdn.morguefile.com/imageData/public/files/k/kconnors/preview/fldr_2009_02_16/file3481234819042.jpg
+      src: http://www.morguefile.com/creative/kconnors
+      author: kconnors
+
+    - img: http://cdn.morguefile.com/imageData/public/files/k/karpati/preview/fldr_2010_08_30/file9751283189935.jpg
+      src: http://www.morguefile.com/creative/GaborfromHungary
+      author: GaborfromHungary
+
+    - img: http://cdn.morguefile.com/imageData/public/files/a/acrylicartist/preview/fldr_2011_03_02/file9291299119053.jpg
+      src: http://www.morguefile.com/creative/AcrylicArtist
+      author: AcrylicArtist
+
+    - img: http://cdn.morguefile.com/imageData/public/files/g/greyerbaby/preview/fldr_2012_05_27/file9141338162937.jpg
+      src: http://www.morguefile.com/creative/greyerbaby
+      author: greyerbaby
+
+    - img: http://cdn.morguefile.com/imageData/public/files/s/snapdragon/preview/fldr_2005_07_16/file0001485113406.jpg
+      src: http://www.morguefile.com/creative/snapdragon
+      author: snapdragon
+
+    - img: http://cdn.morguefile.com/imageData/public/files/s/swiftly/preview/fldr_2009_05_19/file7371242727315.jpg
+      src: http://www.morguefile.com/creative/swiftly
+      author: swiftly
