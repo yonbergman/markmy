@@ -6,7 +6,7 @@
       .btn-group
         %p= t('blurb.background.title')
         - Images.moods.each do |mood|
-          %button.btn.btn-block.btn-default{type: 'submit', name: 'blurb[mood]', value: mood, class: @blurb.mood==mood && 'btn-primary'}
+          %button.btn.btn-block.btn-default.btn-change-img{type: 'submit', name: 'blurb[mood]', value: mood, class: @blurb.mood==mood && 'btn-primary'}
             - if @blurb.mood==mood
               %i.fa.fa-refresh.text-right
             %span= mood.capitalize

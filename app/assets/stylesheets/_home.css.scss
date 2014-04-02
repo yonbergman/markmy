@@ -11,6 +11,11 @@
       height: 5em;
     }
   }
+  form{
+    @include mobile{
+      font-size: 10px;
+    }
+  }
 
   .home-header{
     margin-bottom: $jumbotron-padding;
@@ -19,7 +24,7 @@
     }
     h1{
       @include mobile {
-        font-size: 1.6em;
+        font-size: 1.8em;
       }
       font-weight: 200;
       strong{
@@ -41,7 +46,8 @@
   }
   .form-container{
     background: white;
-    padding: 15px;
+    padding: 10px;
+    @include mobile { padding: 5px; }
     border-radius: 10px;
     @include box-shadow(1px 2px 0 1px rgba(black, 0.35) inset);
 
@@ -63,8 +69,26 @@
   }
 }
 .btn-create-blurb{
-  margin-top: 15px;
-  font-size: 1.4em;
+  margin-top: 10px;
+  font-size: 1.3em;
+  float: right;
+  padding: 10px 24px;
+  @include mobile {
+    // @extend .btn-block;
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+p.note{
+  margin: 10px 0 0 5px;
+  font-size: 1.2em;
+  line-height: 45px; //button height
+  @include mobile {
+    line-height: 175%;
+    margin-top: 10px;
+  }
 }
 
 .jumbotron{

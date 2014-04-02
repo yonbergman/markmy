@@ -24,8 +24,8 @@ en:
       email-subject: 'Check out this prediction from Mark.My'
       email-body: "\"%{text}\"\n - %{username}, %{timeago}\n\nYou can find this predication and more at %{link}"
   home:
-    action: Create your first prediction
-    header: Save <strong>predictions</strong> now,<br/> Say <em>"I told you so"</em>
+    action: Make Prediction
+    header: Make your <strong>prediction</strong> now,<br/> Say <em>"I told you so"</em>
       later.
     note: Predictions can never be edited and are timestamped when first created.
     placeholder: Write what ever you want...

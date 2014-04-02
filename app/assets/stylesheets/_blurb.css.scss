@@ -157,28 +157,6 @@ $max-width: 720px;
 
 }
 
-.action-bar{
-  height: $navbar-height;
-  background-color: $navbar-default-bg;
-  color: $navbar-default-color;
-  padding: 9px $navbar-padding-horizontal;
-  width: 100%;
-  border-top: 1px solid #AAA;
-  @include box-shadow(0 1px white inset);
-
-  .copy-link{
-    width: 320px;
-    // display: inline-block;
-    @include inline-block;
-    @extend .hidden-xs;
-  }
-}
-
-.runner{
-  // height: 50px;
-  background: white;
-}
-
 .notice{
   padding: 5px;
   text-align: center;
@@ -197,26 +175,6 @@ $max-width: 720px;
   @include box-shadow(1px 1px 0 1px rgba(0,0,0,0.2));
   -webkit-backface-visibility: hidden;
   margin-right: 3px;
-}
-
-.change-image-button{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  top: -9px;
-  right: 10px;
-  z-index: 11;
-
-  // background: rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.3);
-  color: #eee;
-  font-size: 18px;
-  padding: 0px 12px;
-  &:hover{
-    color: #FFF;
-    background: rgba(255, 255, 255, 0.5);
-  }
-
 }
 
 .share-buttons{

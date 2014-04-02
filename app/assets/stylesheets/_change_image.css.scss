@@ -1,0 +1,27 @@
+.change-image-button{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  top: -9px;
+  right: 10px;
+  z-index: 11;
+
+  // background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.3);
+  color: #eee;
+  font-size: 18px;
+  padding: 0px 12px;
+  &:hover{
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.btn-change-img{
+  position: relative;
+  .fa-refresh{
+    position: absolute;
+    right: 10px;
+    top: 9px;
+  }
+}
