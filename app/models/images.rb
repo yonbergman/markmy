@@ -19,9 +19,10 @@ class Images
     data.values.flatten
   end
 
-  def random_image(mood = nil)
+  def random_image(mood = nil, except_image = nil)
     arr = data[mood].presence || all_images
-    arr.sample.img
+    arr = arr.map(&:img) - [except_image]
+    arr.sample
   end
 
   def mood_for_url(image_url)

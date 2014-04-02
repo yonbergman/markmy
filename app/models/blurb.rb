@@ -40,7 +40,7 @@ class Blurb < ActiveRecord::Base
 
   def mood=(mood)
     self.remove_custom_background!
-    self.image_url = image_list.random_image(mood)
+    self.image_url = image_list.random_image(mood, self.image_url)
   end
 
   def color

@@ -4,13 +4,21 @@ images:
       src: http://www.flickr.com/photos/mabahamo/58379433/
       author: mabahamo
 
-    - img: https://farm9.staticflickr.com/8096/8531811319_e961fc00a6_b.jpg
-      src: http://www.flickr.com/photos/hslphotosync/8531811319/
-      author: hslphotosync
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_4893-1300x866.jpg
+      src: http://picjumbo.com/category/technology/
+      author: picjumbo
 
-    - img: https://farm9.staticflickr.com/8096/8531811319_e961fc00a6_b.jpg
-      src: http://www.flickr.com/photos/techcocktail/5778630247/
-      author: techcocktail
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_3642-1300x866.jpg
+      src: http://picjumbo.com/category/technology/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_4926-1300x866.jpg
+      src: http://picjumbo.com/category/technology/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_3186-1300x866.jpg
+      src: http://picjumbo.com/category/technology/
+      author: picjumbo
 
     - img: https://farm4.staticflickr.com/3068/2392587656_a5d0e01757_o.jpg
       src: http://www.flickr.com/photos/arenamontanus/2392587656/
@@ -19,6 +27,41 @@ images:
     - img: https://farm2.staticflickr.com/1092/711731769_224980aff3_b.jpg
       src: http://www.flickr.com/photos/parislemon/711731769/
       author: parislemon
+
+  fashion:
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_5921-1300x866.jpg
+      src: http://picjumbo.com/category/fashion/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_5862-1300x866.jpg
+      src: http://picjumbo.com/category/fashion/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_3725-1300x866.jpg
+      src: http://picjumbo.com/category/fashion/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_0652-1300x866.jpg
+      src: http://picjumbo.com/category/fashion/
+      author: picjumbo
+
+  food:
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_6387-1300x866.jpg
+      src: http://picjumbo.com/category/food/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_5890-1300x866.jpg
+      src: http://picjumbo.com/category/food/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_0993-1300x866.jpg
+      src: http://picjumbo.com/category/food/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_3511-1300x866.jpg
+      src: http://picjumbo.com/category/food/
+      author: picjumbo
+
 
   party:
     - img: https://farm6.staticflickr.com/5229/5614979258_f6b9a8b586_b.jpg
@@ -119,6 +162,34 @@ images:
     - img: https://farm6.staticflickr.com/5285/5291203955_8567b9a2c6_b.jpg
       src: http://www.flickr.com/photos/htakashi/5291203955/
       author: htakashi
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_6977-1300x866.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/GoWildImages_MtEverest_NEP0555-1300x867.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_1804-1300x866.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_8697-1300x866.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_6643-1300x866.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_9870-1300x866.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
+
+    - img: http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_9857-1300x866.jpg
+      src: http://picjumbo.com/category/nature/
+      author: picjumbo
 
   geek:
     - img: https://farm1.staticflickr.com/45/149754989_e7f517336c_b.jpg
