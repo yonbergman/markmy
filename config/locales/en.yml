@@ -19,8 +19,7 @@ en:
     show:
       username: '%{username},'
       timeago: '%{time} ago'
-      notice: This prediction was created on <em>%{time}</em> and was locked for changes
-        since
+      notice: This prediction was created and locked for changes on <br/><em>%{time}</em>
       email-subject: 'Check out this prediction from Mark.My'
       email-body: "\"%{text}\"\n - %{username}, %{timeago}\n\nYou can find this predication and more at %{link}"
   home:
