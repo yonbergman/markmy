@@ -115,7 +115,8 @@
       saturate(1.5)
       grayscale(0.5)
     );
-    @include translateZ(0);
+    // @include translateZ(0);
+    @include translate3d(0,0,0);
 
   }
 
