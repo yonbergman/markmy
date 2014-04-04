@@ -5,7 +5,7 @@ class BlurbsController < ApplicationController
 
   def index
     @title = I18n.translate('my_predictions')
-    @blurbs = current_user.blurbs
+    @blurbs = current_user.admin? ? Blurb.all : current_user.blurbs
   end
 
   def show

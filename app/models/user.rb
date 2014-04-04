@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
              :password => SecureRandom.urlsafe_base64(50))
   end
 
+  def admin!
+    update(admin: true)
+  end
+
 end
