@@ -1,11 +1,10 @@
 # First Version
 * Better handling of longer texts
-* Limit the length of the texts
-* Bigger poster size
 * Connect Domain
   * Add Support fo email creation
 
 # Next Version
+* Reply to prediction
 * Create prediction open in popup
 * Add Support for twitter creation (@markmyapp)
 * Add notification feature / Due date
