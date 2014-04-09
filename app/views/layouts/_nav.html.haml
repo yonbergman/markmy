@@ -14,13 +14,18 @@
         %ul.nav.navbar-nav
           - unless @in_home
             %li
-              = link_to new_blurb_path do
+              = link_to root_path do
                 %i.fa.fa-plus
                 = t('nav.create_prediction')
           %li
             = link_to my_blurbs_path do
               %i.fa.fa-list-ul
               = t('my_predictions')
+          - if admin_signed_in?
+            %li
+              = link_to admin_predictions_path do
+                %i.fa.fa-dashboard
+                = t('nav.admin.dashboard')
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
             - if current_user.guest_account?

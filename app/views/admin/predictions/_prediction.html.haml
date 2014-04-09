@@ -1,0 +1,11 @@
+%tr
+  %td
+    %small
+      = link_to blurb_path(prediction) do
+        %i.fa.fa-share
+        %span= prediction.token
+        %br
+        %span= prediction.id
+  %td= prediction.username
+  %td= prediction.text
+  %td= time_ago_in_words prediction.created_at

@@ -1,11 +1,17 @@
 Markmy::Application.routes.draw do
   devise_for :users, :controllers => { registrations: :registrations, sessions: :sessions }
+
+  namespace :admin do
+    resources :predictions, only: [:index]
+  end
+
   resources :blurbs, :path => :words, only: [:show, :create, :destroy, :update] do
     get :update_background
   end
-  get '/words' => 'application#home', :as => 'home'
-  get '/blurbs/new' => 'application#home', as: :new_blurb
-  get 'my_blurbs' => 'blurbs#index', :as => 'my_blurbs'
-  get 'user_home' => redirect('/my_blurbs'), :as => 'user_root'
+  get '/my_predictions' => 'blurbs#index', :as => 'my_blurbs'
+
   root to: redirect('/words')
+  get '/words' => 'application#home', :as => 'home'
+
+  get 'user_home' => redirect('/blurbs'), :as => 'user_root'
 end

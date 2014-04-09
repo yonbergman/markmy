@@ -22,4 +22,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :name
   end
 
+  def admin_signed_in?
+    user_signed_in? and current_user.admin?
+  end
+  helper_method :admin_signed_in?
+
 end

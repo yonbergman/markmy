@@ -1,0 +1,11 @@
+#dashboard-page.admin-page.well
+  %h1 Admin Dashboard
+  %table.table.table-striped.table-bordered
+    %thead
+      %tr
+        %th ID
+        %th User
+        %th Text
+        %th Date
+    - @predictions.each do |prediction|
+      = render 'admin/predictions/prediction', prediction: prediction

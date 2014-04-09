@@ -9,6 +9,8 @@ class Blurb < ActiveRecord::Base
 
   mount_uploader :custom_background, BackgroundUploader
 
+  default_scope { order(:created_at) }
+
   def to_param
     self.token
   end
