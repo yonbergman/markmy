@@ -3,12 +3,14 @@ class BlurbsController < ApplicationController
 
   before_filter :authenticate_user!, only: [:index, :update, :update_background]
 
+
   def index
     @title = I18n.translate('my_predictions')
     @blurbs = current_user.blurbs
   end
 
   def show
+    impressionist(@blurb)
     @uploader = @blurb.custom_background
     @uploader.success_action_redirect = blurb_update_background_url(@blurb)
   end

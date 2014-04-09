@@ -11,6 +11,8 @@ class Blurb < ActiveRecord::Base
 
   default_scope { order(:created_at) }
 
+  is_impressionable counter_cache: true, unique: true
+
   def to_param
     self.token
   end

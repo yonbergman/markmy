@@ -10,6 +10,7 @@ gem 'enumify'
 gem 'devise'
 gem 'hashie'
 gem 'carrierwave_direct'
+gem 'impressionist'
 
 gem 'haml'
 gem 'sass', '3.2.13'
