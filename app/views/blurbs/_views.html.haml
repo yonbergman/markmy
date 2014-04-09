@@ -1,0 +1,4 @@
+.number_of_views
+  %button.btn.btn-sm.btn-transparent.btn-views{data: {container: 'body', toggle: 'tooltip', placement: 'bottom', title: t('.views', count: @blurb.impressions_count)}}
+    %i.fa.fa-eye
+    = @blurb.impressions_count

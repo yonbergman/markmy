@@ -1,4 +1,5 @@
 $(document).on 'ready page:load', ->
+  $('.btn-views').tooltip()
   $('.change-image-button').popover(
     html: true,
     content: $('.moods').html()

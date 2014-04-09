@@ -22,6 +22,10 @@ en:
       notice: This prediction was created and locked for changes on <br/><em>%{time}</em>
       email-subject: 'Check out this prediction from Mark.My'
       email-body: "\"%{text}\"\n - %{username}, %{timeago}\n\nYou can find this predication and more at %{link}"
+    views:
+      views:
+        one: '1 view'
+        other: '%{count} views'
   home:
     action: Make Prediction
     header: Make your <strong>prediction</strong> now,<br/> Say <em>"I told you so"</em>

@@ -1,4 +1,4 @@
-.change-image-button{
+.author_toolbar{
   position: absolute;
   top: 5px;
   right: 5px;
@@ -6,15 +6,26 @@
   right: 10px;
   z-index: 11;
 
-  // background: rgba(0, 0, 0, 0.4);
+  & > div {
+    display: inline;
+  }
+
+}
+
+.btn-transparent{
   background: rgba(255, 255, 255, 0.3);
+  padding: 0px 12px;
   color: #eee;
   font-size: 18px;
-  padding: 0px 12px;
   &:hover{
     color: #FFF;
     background: rgba(255, 255, 255, 0.5);
   }
+}
+
+.change-image-button{
+
+  @extend .btn-transparent;
 }
 
 .btn-change-img{
