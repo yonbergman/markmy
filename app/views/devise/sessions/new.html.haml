@@ -1,6 +1,12 @@
 .well
   = render 'layouts/flash'
-  %h2 Sign in
+  %h2
+    Sign in
+    - if user_signed_in?
+      %small
+        or
+        = link_to t('nav.user.create_account'), edit_user_registration_path
+
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     .form-group
       = f.label :email

@@ -13,5 +13,5 @@ Markmy::Application.routes.draw do
   root to: redirect('/words')
   get '/words' => 'application#home', :as => 'home'
 
-  get 'user_home' => redirect('/blurbs'), :as => 'user_root'
+  get 'user_home' => redirect('/my_predictions'), :as => 'user_root'
 end
