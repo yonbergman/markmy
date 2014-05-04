@@ -1,9 +1,7 @@
 - @in_home = true
 - @noheight = true
 - content_for :on_body do
-  .bg-img
-    .bgg{:style => "background-image: url('http://picjumbo.picjumbocom.netdna-cdn.com/wp-content/uploads/IMG_3242-1300x866.jpg')"}
-
+  .home-bg-img
   .img-attribution
     = t('image-attribution')
     = link_to 'Viktor Hanacek', 'http://twitter.com/viktorhanacek', target: :_blank
@@ -26,13 +24,6 @@
               %p.note
                 %i.fa.fa-lock.fa-lg
                 %span= t('home.note')
-
-        -# .row
-        -#   .col-sm-12.text-center
-        -#     %br
-        -#     %span &nbsp;
-        -#     %i.fa.fa-lock.fa-lg
-        -#     %span= t('home.note')
 
     .container
       %br

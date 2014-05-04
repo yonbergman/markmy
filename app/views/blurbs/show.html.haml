@@ -15,7 +15,10 @@
         %strong= @blurb.text
         .attribution
           %span{ blurb_user_attributes }= t('.username', :username => (@blurb.username))
-          %span.timeago{'data-livestamp' => @blurb.time.to_i}= t('.timeago', time: time_ago_in_words(@blurb.time))
+          %span.timeago
+            %span= simple_date(@blurb.time)
+            %small.live
+              %span{'data-livestamp' => @blurb.time.to_i}= t('.timeago', time: time_ago_in_words(@blurb.time))
   .notice!= t('.notice', time: @blurb.time)
 
   .share-buttons.row.text-center

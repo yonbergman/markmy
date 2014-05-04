@@ -19,6 +19,20 @@ class Home
     @typed()
     new App.InputPresentValidator(@ui.input, @ui.btn)
 
+    @ui.btn.tooltip(
+      html: true
+      title: "<i class='fa fa-clock-o'></i> <span class='livedate'>#{moment().format('YYYY-MM-DD HH:mm:ss')}</span>"
+      placement: 'bottom'
+      trigger: 'manual'
+      container: 'body'
+      )
+    setInterval(
+      -> $('.livedate').text(moment().format("YYYY-MM-DD HH:mm:ss"))
+    , 10
+    )
+    @ui.btn.tooltip('show')
+
+
 
   bindActions: ->
     @ui.overlay.on('click', @wantToEdit)
@@ -44,7 +58,7 @@ class Home
     if (ev.keyCode == 13) #ENTER
       ev.preventDefault()
       $(ev.target).parents('form').submit()
-      return false;
+      return false
 
   blur: ->
     if _.isBlank(@ui.input.val())
@@ -55,4 +69,4 @@ class Home
 $(document).on 'ready page:load', ->
   el = $('#home')
   return unless el[0]
-  window.home = new Home(el);
+  window.home = new Home(el)
