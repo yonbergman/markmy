@@ -23,7 +23,7 @@ module BlurbsHelper
     return {} unless author?
     if current_user.guest_account?
       {
-        class: 'has-popover has-link',
+        class: 'user has-popover has-link',
         data: {
         url: edit_user_registration_path,
         toggle: 'popover',

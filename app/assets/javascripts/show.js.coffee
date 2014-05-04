@@ -10,6 +10,9 @@ $(document).on 'ready page:load', ->
     if el.data('toggle') != 'popover' && el.parents('.change-image-button').length == 0 && el.parents('.popover.in').length == 0
       $('.change-image-button').popover('hide')
 
+  $('.user.has-popover').popover('show')
+  setTimeout((-> $('.user.has-popover').popover('hide')), 2400)
+
 
   copyUrl($('.btn-share-link'), $('.btn-share-link').attr('href'))
 
