@@ -1,9 +1,5 @@
-# First Version
-* Better handling of longer texts
-* Connect Domain
-  * Add Support fo email creation
-
 # Next Version
+* Add Support fo email creation
 * Reply to prediction
 * Create prediction open in popup
 * Add Support for twitter creation (@markmyapp)
