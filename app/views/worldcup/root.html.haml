@@ -1,0 +1,24 @@
+- content_for :on_body do
+  .world-cup-bg
+  .img-attribution
+    = t('image-attribution')
+    = link_to 'Antonio Thmoas', 'https://www.flickr.com/photos/antoniothomas/', target: :_blank
+
+#world-cup-page
+  .title
+    %h1 Mark.My at the World Cup 2014
+    .lead The 2014 world cup is upon us and Mark.My is here to help you settle the score with your friends.
+    %p
+      Use Mark.My to show off you football knowledge, predict the outcomes of specific matches or of the whole tournament.
+      %br
+      Every prediction made through Mark.My is secure and timestamped so no one can fool you.
+      %br
+      You can use this page to pre-fill a prediction, or click Create Prediction to write your own.
+
+  .choosing
+    %h2 Who will win the 2014 World Cup?
+    - all_teams.each do |team|
+      = link_to(worldcup_path(:team => team), class: 'team col-md-3 col-sm-6 col-xs-12') do
+        = image_tag("flags/#{team.parameterize}.png", class: :flag)
+        = team
+

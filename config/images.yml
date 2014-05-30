@@ -236,3 +236,48 @@ images:
     - img: http://cdn.morguefile.com/imageData/public/files/s/swiftly/preview/fldr_2009_05_19/file7371242727315.jpg
       src: http://www.morguefile.com/creative/swiftly
       author: swiftly
+
+  world-cup:
+    - img: https://farm1.staticflickr.com/68/181932889_81a4e595d5_o.jpg
+      src: https://www.flickr.com/photos/angelocesare/
+      author: angelocesare
+
+    - img: https://farm8.staticflickr.com/7438/9095073768_2aa94dfa77_h.jpg
+      src: https://www.flickr.com/photos/caochopp/
+      author: Digo_Souza
+
+    - img: https://farm8.staticflickr.com/7451/9095024718_ad08e804d8_h.jpg
+      src: https://www.flickr.com/photos/caochopp/
+      author: Digo_Souza
+
+    - img: https://farm3.staticflickr.com/2679/4300749826_31bc6600c0_b.jpg
+      src: https://www.flickr.com/photos/warrenski/
+      author: warrenski
+
+    - img: https://farm8.staticflickr.com/7342/12091777686_9ac81be7ea_h.jpg
+      src: https://www.flickr.com/photos/warrenski/
+      author: warrenski
+
+    - img: https://farm5.staticflickr.com/4039/4676898983_47178b32b2_o.jpg
+      src: https://www.flickr.com/photos/antoniothomas/
+      author: thomas
+
+    - img: https://farm1.staticflickr.com/75/178821720_785635d5cb_o.jpg
+      src: https://www.flickr.com/photos/seedingchaos/
+      author: ali borhi
+
+    - img: https://farm4.staticflickr.com/3004/2931110269_59e0244157_b.jpg
+      src: https://www.flickr.com/photos/robinrimbaud/
+      author: robinrimbaud
+
+    - img: https://farm4.staticflickr.com/3068/2366933479_b00d101e1a_b.jpg
+      src: https://www.flickr.com/photos/eneas/
+      author: eneas
+
+    - img: https://farm5.staticflickr.com/4135/4756737840_4201f00301_o.jpg
+      src: https://www.flickr.com/photos/jikatu/
+      author: jikatu
+
+    - img: https://farm9.staticflickr.com/8216/8404638199_5921babed9_h.jpg
+      src: https://www.flickr.com/photos/keremtapani/
+      author: keremtapani

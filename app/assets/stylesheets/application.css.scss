@@ -92,3 +92,40 @@ body > .main-container{
   background-size: cover;
   background-position: center;
 }
+
+.world-cup-bg{
+  @include background-image(image-url('world-cup.jpg'));
+  background-repeat: no-repeat;
+
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.flag{
+  width: 30px;
+  height: 20px;
+}
+
+.team{
+  background: rgba(white, 0.5);
+  padding: 5px;
+  &:hover{
+    text-decoration: none;
+    background: rgba(white, 0.3);
+  }
+}
+
+#world-cup-page{
+  color: white;
+  h1,h2{
+    text-shadow: 0 1px rgba(0,0,0,0.7);
+  }
+  font-weight: normal;
+}

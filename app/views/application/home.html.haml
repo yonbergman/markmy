@@ -12,6 +12,7 @@
         .row.home-header
           %h1.text-center!= t('home.header')
         = form_for @blurb do |f|
+          = f.hidden_field :mood
           .row
             .form-container.form-container-centered
               .form-group

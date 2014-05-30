@@ -45,8 +45,11 @@ class Home
     @ui.input.show().focus()
 
   typed: ->
-    @ui.input.hide()
-    @ui.overlay.show()
+    if _.isBlank(@ui.input.val())
+      @ui.input.hide()
+      @ui.overlay.show()
+    else
+      @ui.overlay.hide()
     @ui.overlayText.typed(
       strings: [@originalPlaceholder].concat(@texts)
       loop: true

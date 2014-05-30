@@ -14,4 +14,6 @@ Markmy::Application.routes.draw do
   get '/words' => 'application#home', :as => 'home'
 
   get 'user_home' => redirect('/my_predictions'), :as => 'user_root'
+
+  get 'worldcup' => 'worldcup#root'
 end

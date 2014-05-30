@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def home
-    @blurb = Blurb.new
+    @blurb = Blurb.new(text: params[:text], mood: params[:mood])
   end
 
   def create_and_sign_in_guest_account
