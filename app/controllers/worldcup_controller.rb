@@ -1,6 +1,8 @@
 class WorldcupController < ApplicationController
 
   def root
+    @title = 'World Cup 2014'
+    @description = 'The 2014 world cup is upon us and Mark.My is here to help you settle the score with your friends.'
     if params[:team].present?
       redirect_to blurbs_path(text: SENTENCES.sample % params[:team], mood: 'world-cup')
     end
