@@ -2,7 +2,7 @@ class WorldcupController < ApplicationController
 
   def root
     @title = 'World Cup 2014'
-    @description = 'The 2014 world cup is upon us and Mark.My is here to help you settle the score with your friends.'
+    @description = 'The 2014 World Cup has started and "Mark.my - the ultimate predictions platform" is here to help you tell your friends "I told you so!".'
     if params[:team].present?
       redirect_to blurbs_path(text: SENTENCES.sample % params[:team], mood: 'world-cup')
     end
@@ -14,9 +14,11 @@ class WorldcupController < ApplicationController
   helper_method :all_teams
 
   SENTENCES = [
-      '%s is definitely taking the world cup',
+      '%s is definitely taking the World Cup',
       '%s will win the World Cup 2014',
-      '%s will easily win cup',
+      '%s will easily win the cup',
+      '%s will easily win the cup',
+      '%s will make it to the finals... and win!',
   ]
 
 end

@@ -94,7 +94,7 @@ body > .main-container{
 }
 
 .world-cup-bg{
-  @include background-image(image-url('world-cup.jpg'));
+  @include background-image(image-url('world-cup-bg.jpg'));
   background-repeat: no-repeat;
 
   position: fixed;
@@ -128,4 +128,64 @@ body > .main-container{
     text-shadow: 0 1px rgba(0,0,0,0.7);
   }
   font-weight: normal;
+}
+
+.world-cup-banner{
+  @include background-image(image-url('world-cup-banner.png'));
+  width: 900px;
+  height: 200px;
+  display: block;
+  background-color: #459d07;
+  width: 100%;
+  height:100px;
+  @include background-image(image-url('world-cup-banner-highlights.png'));
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 254px 100px;
+
+  box-shadow: 0 4px rgba(0,0,0,0.2), 0 -4px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  padding-left: 9%;
+  @include mobile{
+    padding-left: 0;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+
+  i{
+    font-weight: 300;
+    font-size: 6em;
+
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    @include mobile{
+      margin: 0 10px 0 0;
+    }
+    line-height: 100px;
+    color: #fefe00;
+    text-shadow: 0 3px 0px #3c8906, 1px 2px 0px #3c8906, -1px 2px 0px #3C8906;
+  }
+  h1{
+    font-weight: bold;
+    font-size: 4em;
+    color: #fefe00;
+    text-shadow: 0 3px 0px #3c8906, 1px 2px 0px #3c8906, -1px 2px 0px #3C8906;
+    margin: 7px 0 0 0;
+    @include mobile{
+      font-size: 2em
+    }
+    @include xs{
+      font-size: 2.5em
+    }
+  }
+  h2{
+    font-size: 24px;
+    @include sm{
+//      font-size: 16px;
+    }
+    color: #37560a;
+    margin: 0
+  }
 }

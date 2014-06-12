@@ -47,7 +47,7 @@ class BlurbsController < ApplicationController
   end
 
   def blurb_params
-    params.require(:blurb).permit(:text)
+    params.require(:blurb).permit(:text, :mood)
   end
 
   def edit_blurb_params
