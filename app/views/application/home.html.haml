@@ -10,9 +10,11 @@
     - if @blurb.empty?
       %a.world-cup-banner{:href => worldcup_path}
         .container
-          %i.fa.fa-trophy
-          %h1 World Cup 2014
-          %h2 Click here to make your World Cup predictions
+          .row
+            .col-md-10.col-md-offset-2.col-xs-12
+              %i.fa.fa-trophy
+              %h1 World Cup 2014
+              %h2 Click here to make your World Cup predictions
     .jumbotron
       .container
         .row.home-header
