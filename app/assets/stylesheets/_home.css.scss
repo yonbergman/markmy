@@ -24,7 +24,9 @@
     }
     h1{
       @include mobile {
-        font-size: 1.8em;
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 0;
       }
       font-weight: 200;
       strong{

@@ -174,7 +174,9 @@ body > .main-container{
     text-shadow: 0 3px 0px #3c8906, 1px 2px 0px #3c8906, -1px 2px 0px #3C8906;
     margin: 7px 0 0 0;
     @include mobile{
-      font-size: 2em
+      font-size: 1.8em;
+      margin-top: 15px;
+      margin-bottom: 2px;
     }
     @include xs{
       font-size: 2.5em
@@ -182,8 +184,8 @@ body > .main-container{
   }
   h2{
     font-size: 24px;
-    @include sm{
-//      font-size: 16px;
+    @include mobile{
+      font-size: 18px;
     }
     color: #37560a;
     margin: 0
