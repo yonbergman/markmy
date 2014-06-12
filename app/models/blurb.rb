@@ -13,6 +13,10 @@ class Blurb < ActiveRecord::Base
 
   is_impressionable counter_cache: true, unique: true
 
+  def empty?
+    text.blank?
+  end
+
   def to_param
     self.token
   end
