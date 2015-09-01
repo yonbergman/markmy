@@ -16,6 +16,8 @@ class BlurbsController < ApplicationController
   end
 
   def create
+    render inline: '', status: 500 and return if blurb_params[:text].include? 'a href'
+
     @blurb = create_blurb
 
     if @blurb.save
