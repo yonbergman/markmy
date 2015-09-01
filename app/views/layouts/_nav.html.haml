@@ -26,11 +26,6 @@
               = link_to admin_predictions_path do
                 %i.fa.fa-dashboard
                 = t('nav.admin.dashboard')
-          %li.world-cup-nav
-            = link_to worldcup_path do
-              %span
-                %i.fa.fa-trophy
-                = t('world_cup')
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
             - if current_user.guest_account?
